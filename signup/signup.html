@@ -1,0 +1,14 @@
+<!-- Header & Navigation -->
+<div class="carsiown-nav" ng-include="'header/_header.html'"></div>
+
+<div class="container">
+	<form class="cio-auth-form" ng-submit="fakeSignup()">
+		<h2 class="cui-beta">Sign Up with Cars.com!</h2>
+		<p>To save your car, create an account, or <a ui-sref="login">log in</a> if you've signed up already.</p>
+
+		<label>Username:</label>
+		<input type="text" value="{{username}}" disabled>
+
+		<button class="cui-button" type="submit">Sign Up</button>
+	</form>
+</div>

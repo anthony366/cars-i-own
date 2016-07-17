@@ -1,0 +1,206 @@
+.carsiown-nav {
+
+	.global-nav {
+		background: $primary-color-dark;
+		@media (min-width: $break1) {
+			padding-right: 1rem;
+		}
+		.container {
+			padding: 0;
+		}
+	}
+
+	.global-nav__extra {
+		display: block; // overrides the default pattern that is jQuery based
+		border-bottom: solid 1px $light-gray;
+	}
+
+	.global-nav__profile-trigger {
+		&.active {
+			background-color: rgba($white, 0.2);
+		}
+		@media (min-width: 768px) {
+			-ms-flex-order: 3;
+			order: 3;
+			}
+		}
+	.global-nav__icon--profile {
+		position: relative;
+
+		svg {
+			fill: rgba(255, 255, 255, 0.6);
+			color: rgba(255, 255, 255, 0.6);
+			&.login {
+				fill: rgba(255, 255, 255, 0.6);
+				color: rgba(255, 255, 255, 0.6);
+			}
+		}
+
+		.global-nav__profile-count {
+			background-color: $accent-color-5;
+			border-radius: 1rem;
+			color: $white;
+			font-size: 1.2rem;
+			font-weight: 600;
+			height: 0.5rem;
+			right: 1.3rem;
+			line-height: 0.4;
+			position: absolute;
+			padding: 0.35rem 0.369rem;
+			text-align: center;
+			top: 1.1rem;
+			transform: translate(50%, -50%);
+		}
+		&.logout-icon {
+			display: block;
+		}
+		&.login-icon {
+			display: none;
+		}
+	}
+	.extra-menu__heading {
+		color: #532380;
+		margin-bottom: 1.6rem;
+		padding: 0 1.6rem;
+
+		@media (min-width: $break1) {
+			text-align: center;
+		}
+	}
+	.global-nav__login {
+		display: flex;
+		margin: 0 auto 3.2rem;
+		padding: 0 0.8rem;
+
+		@media (min-width: $break1) {
+			width: 35.70rem;
+		}
+
+		.cui-button--secondary {
+			flex: 1;
+			margin: 0 0.8rem;
+		}
+	}
+	.global-nav__logout {
+		display: flex;
+		padding: 2.4rem 1.6rem 0;
+		margin: 0 auto;
+
+		@media (min-width: $break1) {
+			clear: both;
+			width: 35.70rem;
+		}
+	}
+	.global-nav__sub-menu ul {
+		border-bottom: 0;
+		display: block;
+		padding: 0;
+
+		@media (min-width: $break1) {
+			width: 70%;
+			max-width: 97.5rem;
+			margin: 0 auto;
+			text-align: center;
+			column-gap: 1.6rem;
+			column-rule: 0.1rem solid $light-gray;
+
+			&.anonymous {
+				column-count: 2;
+			}
+
+			&.logged-in {
+				column-count: 3;
+			}
+		}
+		li {
+			border-bottom: 0.1rem solid $light-gray;
+			position: relative;
+
+			@media (min-width: $break1) {
+				border-bottom: 0;
+				page-break-inside: avoid;
+				margin-bottom: 0.8rem;
+			}
+		}
+
+		a {
+			color: $darker-gray;
+			display: block;
+			font-size: 1.6rem;
+			font-weight: 400;
+			line-height: 1.25;
+			padding: 1.1rem 1.6rem;
+			width: 100%;
+
+			&:hover {
+				background-color: $lighter-gray;
+		}
+
+			@media (min-width: $break1) {
+				text-align: center;
+				padding: 0.8rem 0;
+			}
+		}
+
+		cui-icon {
+			position: absolute;
+			right: 2.4rem;
+			top: 1.5rem;
+			transform: rotate(-90deg);
+
+			@media (min-width: $break1) {
+				display: none;
+			}
+
+			svg {
+				fill: $gray;
+				color: $gray;
+			}
+		}
+	}
+	.global-nav__menu-trigger {
+		height: 4.8rem;
+		width: 4.8rem;
+		padding-top: 1.6rem;
+		cursor: pointer;
+
+		@media all and (min-width: 768px) {
+			display: none;
+		}
+
+		span,
+		&::before,
+		&::after {
+			display: block;
+			height: 0.1rem;
+			width: 50%;
+			background-color: rgba($white, $overlay-opacity);
+			margin: 0 auto 0.7rem;
+			transition: none;
+		}
+		&.active {
+			background-color: rgba($white, 0.2);
+		}
+		&.active span {
+			opacity: 1;
+		}
+		&.active::before {
+			display: block;
+			transform: none;
+			height: 0.1rem;
+			width: 50%;
+			background-color: rgba($white, $overlay-opacity);
+			margin: 0 auto 0.7rem;
+			transition: none;
+		}
+		&.active::after {
+			transform: none;
+			display: block;
+			height: 0.1rem;
+			width: 50%;
+			background-color: rgba($white, $overlay-opacity);
+			margin: 0 auto 0.7rem;
+			transition: none;
+		}
+	}
+}

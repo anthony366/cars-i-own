@@ -1,0 +1,23 @@
+<div class="alert alert--success">
+    <cui-icon class="alert__close js-close">
+        <svg class="icon-close">
+              <use xlink:href="#icon-close">
+        </svg>
+    </cui-icon>
+    <cui-icon class="alert__icon">
+        <svg class="icon-check">
+              <use xlink:href="#icon-check">
+        </svg>
+    </cui-icon>
+
+    <h5 class="cui-epsilon heading--alert">{{headingText}}</h5>
+    <p class="alert__content" ng-if="paragraphText">{{paragraphText}}</p>
+</div>
+
+<script>
+$(document).ready(function() {
+    $(".alert .js-close").on("click", function() {
+        $(this).parents(".alert").fadeOut();
+    });
+});
+</script>

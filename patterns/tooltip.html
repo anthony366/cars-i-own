@@ -1,0 +1,18 @@
+<div class="tooltip">
+	<p>Lorem ipsum dolor sit amet, con s s sect aci adipisicing elit, sed do ei u s mod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco</p>
+	<cui-icon>
+		<svg class="icon-close">
+  			<use xlink:href="#icon-close">
+		</svg>
+	</cui-icon>
+</div>
+
+<script>
+$(document).ready(function() {
+	$(".tooltip .js-close").on("click", function() {
+		$(this).parents(".tooltip").fadeOut();
+	});
+});
+</script>

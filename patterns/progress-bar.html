@@ -1,0 +1,63 @@
+<div class="progress-bar">
+	<div class="start-point"></div>
+	<div class="progress-step">
+	 	<div class="number cui-beta--secondary">1</div>
+	 	<div class="completed animated bounceIn">
+	 		<cui-icon class="checkmark">
+		          <svg>
+		             <use xlink:href="#icon-checkmark"></use>
+		         </svg>
+        	</cui-icon>
+	 	</div>
+	  	<span class="label">My Car Info</span>
+	</div>
+	<div class="progress-step">
+	  <div class="number cui-beta--secondary">2</div>
+	  <div class="completed-two animated bounceIn">
+	 		<cui-icon class="checkmark">
+		          <svg>
+		             <use xlink:href="#icon-checkmark"></use>
+		         </svg>
+        	</cui-icon>
+	 	</div>
+	  	<span class="label">Condition</span>
+	</div>
+	<div class="progress-step">
+	  	<div class="number cui-beta--secondary">3</div>
+	  	<span class="label">Photos</span>
+	</div>
+	<div class="progress-step">
+	  	<div class="number cui-beta--secondary">4</div>
+	  	<span class="label">Contact Info</span>
+	</div>
+	<div class="progress-step">
+	  	<div class="number cui-beta--secondary">5</div>
+	  	<span class="label">Review</span>
+	</div>
+	<div class="progress-status">
+	<div class="start-point"></div>
+		<cui-icon class="car">
+           <svg>
+             <use xlink:href="#icon-carside"></use>
+            </svg>
+         </cui-icon>
+	</div>
+	<div class="end-point"></div>
+</div>
+<script>
+	$(document).ready(function() {
+		$(window).resize(function () {
+			if ($(window).width() == 309) {
+				location.reload();
+			} else if ($(window).width() == 320) {
+				location.reload();
+			} else if ($(window).width() == 757) {
+				location.reload();
+			} else if ($(window).width() == 768) {
+				location.reload();
+			}
+		});
+		$('.completed').delay(2000).fadeIn();
+		$('.completed-two').delay(4800).fadeIn();
+	});
+</script>

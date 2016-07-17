@@ -1,0 +1,37 @@
+<div class="button-bar-container">
+    <ul class="button-bar radio-list">
+        <li>
+            <label>
+                <input checked="" type="radio" value="new">
+                New
+            </label>
+        </li>
+        <li class="active">
+            <label>
+                <input type="radio" value="used">
+                Used
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="radio" value="cpo">
+                Certified <i>Pre-Owned</i>
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="radio" value="all">
+                All
+            </label>
+        </li>
+    </ul>
+</div>
+
+<script>
+$( document ).ready(function() {
+    $(".button-bar li").on("click", function() {
+        $(this).siblings().removeClass("active");
+        $(this).addClass("active");
+    });
+});
+</script>

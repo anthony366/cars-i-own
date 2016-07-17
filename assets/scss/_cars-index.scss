@@ -1,0 +1,136 @@
+.car-listings {
+
+	background-color: $lighter-gray;
+	border-top: 2px solid $light-gray;
+	padding: 3.2rem 1.6rem;
+	@extend %clearfix;
+
+	@media (min-width: $break1) {
+		padding: 2.4rem 1.6rem;
+	}
+
+}
+
+.car-listing {
+
+	padding: 0 0 2.4rem;
+	position: relative;
+	margin: 0 auto 2.4rem;
+
+	@media (min-width: $break1) {
+		padding: 1.6rem;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&__image {
+
+		display: block;
+		margin-bottom: 1.6rem;
+
+		@media (min-width: $break1) {
+			float: left;
+			width: 25%;
+			margin: 0;
+		}
+
+		img {
+			display: block;
+		}
+
+	}
+
+	&__details {
+
+		padding: 0 1.6rem;
+
+		@media (min-width: $break1) {
+			float: left;
+			width: 50%;
+		}
+
+		.confirmation {
+			color: $accent-color-1;
+			border: 0;
+			background: none;
+			outline: none;
+			padding: 0;
+			&:hover {
+				color: $accent-color-2;
+			}
+		}
+
+	}
+
+	&__nickname {
+
+		margin: 0 0 0.8rem;
+
+	}
+
+	&__title {
+
+		color: $black;
+		margin: 0 0 0.8rem;
+
+		a {
+
+			color: currentColor;
+
+			&:hover {
+				color: currentColor;
+			}
+
+		}
+
+	}
+
+	// dialog boxes that are shown when deleting a car
+	.dialog {
+		background-color: rgba($white, 0.9);
+		position: absolute;
+	}
+
+	.dialog__content {
+		border: 0;
+		width: auto;
+		height: auto;
+		background: none;
+		max-height: 100%;
+		max-width: 100%;
+		min-height: 0;
+		padding: 0;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.dialog__content-body {
+		margin: 0;
+		padding: 0;
+		min-height: 0;
+
+		p {
+			margin-bottom: 1.6rem;
+			text-align: center;
+		}
+
+		.modal-buttons {
+			display: flex;
+		}
+
+		button {
+			flex: 0.5;
+		}
+
+		button:first-child {
+			background-color: $white;
+			margin-right: 1.6rem;
+		}
+
+	}
+
+}

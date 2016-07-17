@@ -1,0 +1,243 @@
+<div class="hero-search-widget">
+    <div class="tab-container container" ng-controller="PanelController as panel">
+        <ul class="tabs">
+            <li class="active" ng-class="{ active: panel.isSelected(1) }"><a ng-click="panel.selectTab(1)"><i>Search</i> Cars for Sale</a></li>
+            <li ng-class="{ active: panel.isSelected(2) }"><a ng-click="panel.selectTab(2)"><i>Read</i> Specs &amp; Reviews</a></li>
+            <li ng-class="{ active: panel.isSelected(3) }"><a ng-click="panel.selectTab(3)"><i>Find</i> Service <i>Centers</i> &amp; Dealers</a></li>
+        </ul>
+
+        <div class="tab-contents">
+            <div class="tab-content" ng-show="panel.isSelected(1)">
+                <form class="styled">
+                    <div class="button-bar-container">
+                        <ul class="button-bar radio-list">
+							<li class="active">
+                                <label>
+                                    <input checked="" type="radio" value="new">
+                                    New
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" value="used">
+                                    Used
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" value="cpo">
+                                    Certified <i>Pre-Owned</i>
+                                </label>
+                            </li>
+							<li>
+                                <label>
+                                    <input type="radio" value="all">
+                                    All
+                                </label>
+                            </li>
+                        </ul>
+                        <small class="tooltip-trigger">What's this?</small>
+                    </div>
+                    <div class="form-controls">
+                        <div class="hsw-makes">
+                            <div class="dropdown">
+                                <select>
+                                    <option>All Makes</option>
+                                    <option>Acura</option>
+                                    <option>Audi</option>
+                                    <option>BMW</option>
+                                    <option>Honda</option>
+                                    <option>Land Rover Range Rover</option>
+                                    <option>Toyota</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="hsw-models">
+                            <div class="dropdown">
+                                <select>
+                                    <option>All Models</option>
+                                    <option>Accord</option>
+                                    <option>Camry</option>
+                                    <option>Civic</option>
+                                    <option>Odyssey</option>
+                                    <option>Pilot</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="hsw-price">
+                            <div class="dropdown">
+                                <select>
+                                    <option>No Max Price</option>
+                                    <option>$5,000-$10,000</option>
+                                    <option>$10,000-$20,000</option>
+                                    <option>$20,000-$30,000</option>
+                                    <option>$30,000-$50,000</option>
+                                    <option>$50,000-$100,000</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="hsw-range">
+                            <div class="hsw-miles">
+                                <div class="dropdown">
+                                    <select>
+                                        <option>Radius</option>
+                                        <option>30 Miles from</option>
+                                        <option>50 Miles from</option>
+                                        <option>100 Miles from</option>
+                                        <option>250 Miles from</option>
+                                        <option selected> All Miles from</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="radius-of-zip">
+                                <input type="tel" placeholder="ZIP" maxlength="5" />
+                            </div>
+                        </div>
+                        <div class="hsw-submit">
+                            <input type="submit" class="cui-button" value="Search" cars-standard-link="Search New">
+                        </div>
+                    </div>
+                    <ul class="other-search-options">
+                        <li>
+                            <a href="">
+                                Advanced Search
+                                <cui-icon>
+                                    <svg class="icon-chevron">
+                                        <use xlink:href="#icon-chevron">
+                                    </svg>
+                                </cui-icon>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="">
+                                Build &amp; Price a New Car
+                                <cui-icon>
+                                    <svg class="icon-chevron">
+                                        <use xlink:href="#icon-chevron">
+                                    </svg>
+                                </cui-icon>
+                            </a>
+
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            <!-- Tab 1 Ends Here -->
+
+            <div class="tab-content tab-2" ng-show="panel.isSelected(2)">
+                <div class="tab-pane">
+                    <form>
+                        <div class="form-controls">
+                            <div class="hsw-makes">
+                                <div class="dropdown">
+                                    <select>
+                                        <option value="">All Makes</option><option value="0" label="Acura">Acura</option><option value="1" label="Alfa Romeo">Alfa Romeo</option><option value="2" label="Am General">Am General</option><option value="3" label="Aston Martin">Aston Martin</option><option value="4" label="Audi">Audi</option><option value="5" label="Avanti Motors">Avanti Motors</option><option value="6" label="Bentley">Bentley</option><option value="7" label="BMW">BMW</option><option value="8" label="Bugatti">Bugatti</option><option value="9" label="Buick">Buick</option><option value="10" label="Cadillac">Cadillac</option><option value="11" label="Chevrolet">Chevrolet</option><option value="12" label="Chrysler">Chrysler</option><option value="13" label="Daewoo">Daewoo</option><option value="14" label="Daihatsu">Daihatsu</option><option value="15" label="Dodge">Dodge</option><option value="16" label="Eagle">Eagle</option><option value="17" label="Ferrari">Ferrari</option><option value="18" label="Fiat">Fiat</option><option value="19" label="Fisker">Fisker</option><option value="20" label="Ford">Ford</option><option value="21" label="Geo">Geo</option><option value="22" label="GMC">GMC</option><option value="23" label="Honda">Honda</option><option value="24" label="Hummer">Hummer</option><option value="25" label="Hyundai">Hyundai</option><option value="26" label="Infiniti">Infiniti</option><option value="27" label="International">International</option><option value="28" label="Isuzu">Isuzu</option><option value="29" label="Jaguar">Jaguar</option><option value="30" label="Jeep">Jeep</option><option value="31" label="Kia">Kia</option><option value="32" label="Koenigsegg">Koenigsegg</option><option value="33" label="Lamborghini">Lamborghini</option><option value="34" label="Land Rover">Land Rover</option><option value="35" label="Lexus">Lexus</option><option value="36" label="Lincoln">Lincoln</option><option value="37" label="Lotus">Lotus</option><option value="38" label="Maserati">Maserati</option><option value="39" label="Maybach">Maybach</option><option value="40" label="Mazda">Mazda</option><option value="41" label="McLaren">McLaren</option><option value="42" label="Mercedes-Benz">Mercedes-Benz</option><option value="43" label="Mercury">Mercury</option><option value="44" label="MINI">MINI</option><option value="45" label="Mitsubishi">Mitsubishi</option><option value="46" label="Morgan">Morgan</option><option value="47" label="Nissan">Nissan</option><option value="48" label="Oldsmobile">Oldsmobile</option><option value="49" label="Panoz">Panoz</option><option value="50" label="Plymouth">Plymouth</option><option value="51" label="Pontiac">Pontiac</option><option value="52" label="Porsche">Porsche</option><option value="53" label="Qvale">Qvale</option><option value="54" label="RAM">RAM</option><option value="55" label="Rolls-Royce">Rolls-Royce</option><option value="56" label="Saab">Saab</option><option value="57" label="Saleen">Saleen</option><option value="58" label="Saturn">Saturn</option><option value="59" label="Scion">Scion</option><option value="60" label="Smart">Smart</option><option value="61" label="Spyker">Spyker</option><option value="62" label="Subaru">Subaru</option><option value="63" label="Suzuki">Suzuki</option><option value="64" label="Tesla">Tesla</option><option value="65" selected="selected" label="Toyota">Toyota</option><option value="66" label="Volkswagen">Volkswagen</option><option value="67" label="Volvo">Volvo</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="hsw-models">
+                                <div class="dropdown">
+                                    <select><option value="">All Models</option><option value="0" label="4Runner">4Runner</option><option value="1" label="Avalon">Avalon</option><option value="2" label="Avalon Hybrid">Avalon Hybrid</option><option value="3" selected="selected" label="Camry">Camry</option><option value="4" label="Camry Hybrid">Camry Hybrid</option><option value="5" label="Camry Solara">Camry Solara</option><option value="6" label="Celica">Celica</option><option value="7" label="Corolla">Corolla</option><option value="8" label="Cressida">Cressida</option><option value="9" label="ECHO">ECHO</option><option value="10" label="FJ Cruiser">FJ Cruiser</option><option value="11" label="Highlander">Highlander</option><option value="12" label="Highlander Hybrid">Highlander Hybrid</option><option value="13" label="Land Cruiser">Land Cruiser</option><option value="14" label="Matrix">Matrix</option><option value="15" label="MR2">MR2</option><option value="16" label="Paseo">Paseo</option><option value="17" label="Pickup">Pickup</option><option value="18" label="Previa">Previa</option><option value="19" label="Prius">Prius</option><option value="20" label="Prius c">Prius c</option><option value="21" label="Prius Plug-in">Prius Plug-in</option><option value="22" label="Prius v">Prius v</option><option value="23" label="RAV4">RAV4</option><option value="24" label="RAV4 EV">RAV4 EV</option><option value="25" label="Sequoia">Sequoia</option><option value="26" label="Sienna">Sienna</option><option value="27" label="Supra">Supra</option><option value="28" label="T100">T100</option><option value="29" label="Tacoma">Tacoma</option><option value="30" label="Tercel">Tercel</option><option value="31" label="Tundra">Tundra</option><option value="32" label="Venza">Venza</option><option value="33" label="Yaris">Yaris</option></select>
+                                </div>
+                            </div>
+                            <div class="hsw-years">
+                                <div class="dropdown">
+                                    <select><option value="" class="ng-binding">All Years</option><option value="0" selected="selected" label="2015">2015</option><option value="1" label="2014">2014</option><option value="2" label="2013">2013</option><option value="3" label="2012">2012</option><option value="4" label="2011">2011</option><option value="5" label="2010">2010</option><option value="6" label="2009">2009</option><option value="7" label="2008">2008</option><option value="8" label="2007">2007</option><option value="9" label="2006">2006</option><option value="10" label="2005">2005</option><option value="11" label="2004">2004</option><option value="12" label="2003">2003</option><option value="13" label="2002">2002</option><option value="14" label="2001">2001</option><option value="15" label="2000">2000</option><option value="16" label="1999">1999</option><option value="17" label="1998">1998</option><option value="18" label="1997">1997</option><option value="19" label="1996">1996</option><option value="20" label="1995">1995</option><option value="21" label="1994">1994</option><option value="22" label="1993">1993</option><option value="23" label="1992">1992</option></select>
+                                </div>
+                            </div>
+                            <div class="hsw-submit">
+                                <input type="submit" value="Search" class="cui-button cui-button--fluid" cars-standard-link="Research">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Tab 2 Ends Here -->
+
+            <div class="tab-content tab-3" ng-show="panel.isSelected(3)">
+                <div class="tab-pane">
+                    <form>
+                        <div class="button-bar-container">
+                            <ul class="button-bar radio-list">
+                                <li class="active">
+                                    <label>
+                                        <input checked="" type="radio" value="service">
+                                        Service Centers
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" value="dealers">
+                                        Dealers
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="form-controls">
+                            <div class="hsw-makes">
+                                <div class="dropdown">
+                                    <select><option value="0" selected="selected" label="All Makes">All Makes</option><option value="1" label="Acura">Acura</option><option value="2" label="Alfa Romeo">Alfa Romeo</option><option value="3" label="Aston Martin">Aston Martin</option><option value="4" label="Audi">Audi</option><option value="5" label="Bentley">Bentley</option><option value="6" label="BMW">BMW</option><option value="7" label="Buick">Buick</option><option value="8" label="Cadillac">Cadillac</option><option value="9" label="Chevrolet">Chevrolet</option><option value="10" label="Chrysler">Chrysler</option><option value="11" label="Dodge">Dodge</option><option value="12" label="Ferrari">Ferrari</option><option value="13" label="Fiat">Fiat</option><option value="14" label="Ford">Ford</option><option value="15" label="GMC">GMC</option><option value="16" label="Honda">Honda</option><option value="17" label="Hyundai">Hyundai</option><option value="18" label="Infiniti">Infiniti</option><option value="19" label="Jaguar">Jaguar</option><option value="20" label="Jeep">Jeep</option><option value="21" label="Kia">Kia</option><option value="22" label="Lamborghini">Lamborghini</option><option value="23" label="Land Rover">Land Rover</option><option value="24" label="Lexus">Lexus</option><option value="25" label="Lincoln">Lincoln</option><option value="26" label="Lotus">Lotus</option><option value="27" label="Maserati">Maserati</option><option value="28" label="Mazda">Mazda</option><option value="29" label="McLaren">McLaren</option><option value="30" label="Mercedes-Benz">Mercedes-Benz</option><option value="31" label="MINI">MINI</option><option value="32" label="Mitsubishi">Mitsubishi</option><option value="33" label="Nissan">Nissan</option><option value="34" label="Porsche">Porsche</option><option value="35" label="RAM">RAM</option><option value="36" label="Rolls-Royce">Rolls-Royce</option><option value="37" label="Scion">Scion</option><option value="38" label="Smart">Smart</option><option value="39" label="Subaru">Subaru</option><option value="40" label="Tesla">Tesla</option><option value="41" selected="selected" label="Toyota">Toyota</option><option value="42" label="Volkswagen">Volkswagen</option><option value="43" label="Volvo">Volvo</option><option value="44" label="Used">Used</option></select>
+                                </div>
+                            </div>
+							<div class="hsw-range">
+	                            <div class="hsw-miles">
+	                                <div class="dropdown">
+	                                    <select>
+	                                        <option value="?" selected="selected" label=""></option>
+	                                        <option value="0" label="10 miles">10 miles</option>
+	                                        <option value="1" label="20 miles">20 miles</option>
+	                                        <option value="2" label="30 miles">30 miles</option>
+	                                        <option value="3" label="40 miles">40 miles</option>
+	                                        <option value="4" label="50 miles">50 miles</option>
+	                                        <option value="5" label="75 miles">75 miles</option>
+	                                        <option value="6" label="100 miles">100 miles</option>
+	                                        <option value="7" label="150 miles">150 miles</option>
+	                                        <option value="8" label="200 miles">200 miles</option>
+	                                        <option value="9" label="250 miles">250 miles</option>
+	                                        <option value="10" label="500 miles">500 miles</option>
+	                                        <option value="11" label="All miles" selected>All miles</option>
+	                                    </select>
+	                                </div>
+	                            </div>
+	                            <div class="radius-of-zip">
+	                                <input type="tel" class="zip-field" name="zipField" maxlength="5" placeholder="ZIP">
+	                                <cars-modal>
+	                                    <div class="modal-container ng-hide" ng-show="showModal">
+	                                        <div class="overlay"></div>
+	                                        <div class="modal">
+	                                            <a class="close"></a>
+	                                            <div ng-transclude="">
+	                                                <cars-zip-form id="zipcaptureform" class="ng-scope">
+	                                                    <h3>Invalid ZIP Code</h3>
+	                                                    <div class="helper-message" ng-transclude=""><p class="ng-scope">To find dealers in your area, please enter your ZIP code.</p></div>
+	                                                    <div>
+	                                                        <input class="zip ng-pristine ng-untouched ng-valid ng-valid-maxlength" ng-class="{'error':zipModal.showError}" type="tel" name="zc" ng-change="zipSearch.zipValidate()" ng-model="selections.zip" maxlength="5" data-js="zip-input" data-zip="error-modal" placeholder="ZIP">
+	                                                        <input class="zip-submit" ng-click="zipModal.submitSearch()" type="submit" value="Go">
+	                                                        <div class="inline-alert ng-hide" ng-show="zipModal.showError">
+	                                                            <div class="error">Please enter a valid 5-digit ZIP code.</div>
+	                                                        </div>
+	                                                    </div>
+	                                                </cars-zip-form>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                </cars-modal>
+	                            </div>
+							</div>
+                            <div class="hsw-submit">
+                                <input type="submit" value="Search" class="cui-button cui-button--fluid" cars-standard-link="Find a Dealer">
+                            </div>
+                        </div>
+                    </form>
+                    <ul class="other-search-options">
+                        <li><a href="/dealers/reviews/">Been to a car dealer lately? Write a review <span class="icon icon-chevron" data-grunticon-embed></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Tab 3 Ends Here -->
+        </div>
+    </div>
+</div>

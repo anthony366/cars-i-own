@@ -1,0 +1,87 @@
+.page-carsiown {
+	.container {
+		padding: 0 1.6rem;
+		@extend %clearfix;
+
+		@media (min-width: 120rem) {
+			max-width: 117rem;
+			padding: 0;
+		}
+	}
+}
+
+.alert--success {
+	margin: 0 0 2.4rem;
+}
+
+.landing-page-header {
+	padding-bottom: 3.2rem;
+
+	&.no-cars {
+		border-bottom: solid 1px $light-gray;
+	}
+
+	h2 {
+		margin: 0 0 1.6rem;
+		text-align: left;
+	}
+
+	h2.login-header {
+		margin: 0 0 1.6rem;
+	}
+
+}
+.login {
+	border-bottom: 0;
+}
+
+.car-added {
+	padding: 3.2rem 0 0;
+
+	@media (min-width: $break1) {
+		margin-bottom: 20rem;
+	}
+
+	a.cui-button {
+		line-height: 1.25;
+		margin-bottom: 1.6rem;
+	}
+	p {
+		margin-bottom: 0.5rem;
+	}
+
+	.car-select {
+		margin-bottom: 0.4rem;
+		@extend %clearfix;
+
+		p {
+			float: left;
+			margin: 0 1.6rem 0 0;
+		}
+
+		ul {
+			float: left;
+			margin: 0.4rem 0;
+			width: 100%;
+
+			@media (min-width: 1024px) {
+				margin: 0;
+				width: 63%;
+			}
+			li {
+				float: left;
+				margin-right: 1.6rem;
+
+				a {
+					display: block;
+					padding: 0.4rem 0;
+				}
+			}
+		}
+	}
+	.cui-epsilion {
+		clear: both;
+		font-weight: 600;
+		margin: 0.4rem 0;
+	}
+}

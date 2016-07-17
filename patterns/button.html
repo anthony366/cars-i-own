@@ -1,0 +1,18 @@
+<button class="cui-button">Primary Button</button>
+<br>
+<a href="#" class="cui-button">Primary (using &lt;a&gt; tag)</a>
+<br>
+<button class="cui-button" disabled>Primary Disabled</button>
+<br>
+<button class="cui-button cui-button--loading" disabled>Loading <span id="button__load">.</span></button>
+<br>
+<button class="cui-button cui-button--fluid">Fluid Button</button>
+
+<script>
+var node = document.getElementById("button__load");
+	var int = setInterval(function() {
+	    if ((node.innerHTML += '.').length == 4)
+	        node.innerHTML = '';
+	    //clearInterval( int ); // at some point, clear the setInterval
+	}, 280);
+</script>

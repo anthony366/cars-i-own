@@ -1,0 +1,127 @@
+<!-- Header & Navigation -->
+<div class="carsiown-nav" ng-include="'header/_header.html'"></div>
+
+<div class="container">
+	<div class="page-title">
+		<h2 class="cui-alpha">Edit Your Car</h2>
+	</div>
+	<form
+		class="carsiown-form"
+		name="editCarForm"
+		ng-submit="editCar(editCarForm.$valid)"
+		ng-class="{'has-error': editCarForm.$submitted && editCarForm.$invalid}"
+		novalidate>
+		<!-- Error Alert -->
+		<div class="alert alert--error" ng-class="{'error-active': editCarForm.$submitted && editCarForm.$invalid}">
+			<cui-icon class="alert__close js-close">
+				<svg class="icon-close">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close">
+					</use>
+				</svg>
+			</cui-icon>
+			<cui-icon class="alert__icon">
+				<svg class="icon-exclamation-circle">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-exclamation-circle">
+					</use>
+				</svg>
+			</cui-icon>
+
+			<h5 class="cui-epsilon heading--alert ng-binding">We need more information.</h5>
+			<p class="alert__content ng-binding ng-scope">Please fix the errors below to save your car.</p>
+		</div>
+		<!-- End Error Alert -->
+
+		<fieldset>
+			<div class="input">
+				<label>Make</label>
+				<div class="dropdown">
+					<select
+						name="make"
+						ng-model="editform.make"
+						ng-options="opt for opt in allMakes()"
+						required>
+						<option value="" disabled selected>Select a Make</option>
+					</select>
+					<p ng-class="{'error-active': editCarForm.$submitted && editCarForm.make.$invalid}" class="helper-text error">Enter your car's make.</p>
+				</div>
+			</div>
+			<div class="input">
+				<label>Model</label>
+				<div class="dropdown">
+					<select
+						name="model"
+						ng-model="editform.model"
+						ng-options="opt for opt in matchingModels(editform.make)"
+						required>
+						<option value="" disabled selected>Select a Model</option>
+					</select>
+					<p ng-class="{'error-active': editCarForm.$submitted && editCarForm.model.$invalid}" class="helper-text error">Enter your car's model.</p>
+				</div>
+			</div>
+			<div class="input">
+				<label>Year</label>
+				<div class="dropdown">
+					<select
+						name="year"
+						ng-model="editform.year"
+						ng-options="opt for opt in matchingYears(editform.model)"
+						required>
+						<option value="" disabled selected>Select a Year</option>
+					</select>
+					<p ng-class="{'error-active': editCarForm.$submitted && editCarForm.year.$invalid}" class="helper-text error">Enter your car's year.</p>
+				</div>
+			</div>
+			<div class="input">
+				<label>Trim</label>
+				<div class="dropdown">
+					<select
+						name="trim"
+						ng-model="editform.trim"
+						ng-options="opt for opt in matchingTrims(editform.make, editform.model, editform.year)"
+						required>
+						<option value="" disabled selected>Select a Trim</option>
+					</select>
+					<p ng-class="{'error-active': editCarForm.$submitted && editCarForm.trim.$invalid}" class="helper-text error">Enter your car's trim.</p>
+				</div>
+			</div>
+			<div class="field-col--half mileage">
+				<div class="input">
+					<label>Mileage</label>
+					<input
+						allow-pattern="\d"
+						format
+						maxlength="7"
+						name="mileage"
+						type="tel"
+						ng-model="editform.mileage"
+						ng-class="{'has-error': editCarForm.$submitted && (editCarForm.mileage.$viewValue == '' || !editCarForm.mileage.$viewValue) }"
+						class="validateme">
+					<p ng-class="{'error-active': editCarForm.$submitted && (editCarForm.mileage.$viewValue == '' || !editCarForm.mileage.$viewValue) }" class="helper-text error">Enter your car's mileage.</p>
+				</div>
+			</div>
+			<div class="field-col--half">
+				<div class="input">
+					<label>ZIP Code</label>
+					<input
+						name="zipcode"
+						type="tel"
+						maxlength="5"
+						allow-pattern="\d"
+						ng-model="editform.zipcode"
+						ng-class="{'has-error': editCarForm.$submitted && (editCarForm.zipcode.$viewValue == '' || !editCarForm.zipcode.$viewValue) }"
+						class="validateme">
+					<p ng-class="{'error-active': editCarForm.$submitted && (editCarForm.zipcode.$viewValue == '' || !editCarForm.zipcode.$viewValue) }" class="helper-text error">Enter your car's ZIP code.</p>
+				</div>
+			</div>
+			<div class="input">
+				<label class="optional">Car's Nickname</label>
+				<input name="nickname" type="text" data-ng-model="editform.nickname">
+			</div>
+			<div class="input">
+				<label class="optional">VIN</label>
+				<input name="vin" type="text" class="vin" data-ng-model="editform.vin" maxlength="17" allow-pattern="(\d|[a-z])">
+			</div>
+		</fieldset>
+		<button type="submit" class="cui-button">Save Details</button>
+	</form>
+</div>

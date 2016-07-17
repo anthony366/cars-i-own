@@ -1,0 +1,46 @@
+<script src="assets/svg/output/grunticon.loader.js"></script>
+<script>
+grunticon(["assets/svg/output/icons.data.svg.css", "assets/svg/output/icons.data.png.css", "assets/svg/output/icons.fallback.css"], grunticon.svgLoadedCallback );
+</script>
+
+<div class="alert alert--error">
+	<div class="icon icon-close alert__close js-close"></div>
+	<div class="icon icon-exclamation-circle alert__icon" data-grunticon-embed></div>
+	<h5 class="heading--alert">Error Alert</h5>
+	<p class="alert__content">Error message may be specific or general depending on the case.</p>
+</div>
+
+<div class="alert alert--success">
+	<div class="icon icon-close alert__close js-close"></div>
+	<div class="icon icon-check alert__icon" data-grunticon-embed></div>
+	<h5 class="heading--alert">Success Alert</h5>
+	<p class="alert__content">Success message may be specific or general depending on the case.</p>
+</div>
+
+<div class="alert alert--notification">
+	<div class="icon icon-close alert__close js-close"></div>
+	<div class="icon icon-info alert__icon" data-grunticon-embed></div>
+	<h5 class="heading--alert">Notification Alert</h5>
+	<p class="alert__content">Notification message may be specific or general depending on the case.</p>
+</div>
+
+<div class="alert alert--warning">
+	<div class="icon icon-close alert__close js-close"></div>
+	<div class="icon icon-warning alert__icon" data-grunticon-embed></div>
+	<h5 class="heading--alert">Warning Alert</h5>
+	<p class="alert__content">Warning message may be specific or general depending on the case.</p>
+</div>
+
+<div class="alert alert--promo">
+	<div class="icon icon-close alert__close js-close"></div>
+	<div class="icon icon-carsell alert__icon" data-grunticon-embed></div>
+	<h5 class="heading--alert">Sell your car your way. <a href="">Get Started</a></h5>
+</div>
+
+<script>
+$(document).ready(function() {
+	$(".alert .js-close").on("click", function() {
+		$(this).parents(".alert").fadeOut();
+	});
+});
+</script>

@@ -1,0 +1,130 @@
+<div class="filter-menu">
+    <ul class="filter-nav">
+        <li data="location" class="js-filter-open">
+            <cui-icon>
+                <svg class="icon-map">
+                    <use xlink:href="#icon-map">
+                </svg>
+            </cui-icon>
+            <strong>Location <b>60604</b></strong>
+        </li>
+        <li data="new-used">
+            <cui-icon>
+                <svg class="icon-new-used-cert">
+                    <use xlink:href="#icon-new-used-cert">
+                </svg>
+            </cui-icon>
+            <strong>New, Used, or Certified</strong>
+        </li>
+        <li data="year">
+            <cui-icon>
+                <svg class="icon-calendar">
+                    <use xlink:href="#icon-calendar">
+                </svg>
+            </cui-icon>
+            <strong>Year</strong>
+        </li>
+        <li data="make">
+            <cui-icon>
+                <svg class="icon-shield">
+                    <use xlink:href="#icon-shield">
+                </svg>
+            </cui-icon>
+            <strong>Make</strong>
+        </li>
+        <li data="model">
+            <cui-icon>
+                <svg class="icon-carfront">
+                    <use xlink:href="#icon-carfront">
+                </svg>
+            </cui-icon>
+            <strong>Model</strong>
+        </li>
+        <li data="style">
+            <cui-icon>
+                <svg class="icon-trim">
+                    <use xlink:href="#icon-trim">
+                </svg>
+            </cui-icon>
+            <strong>Trim</strong>
+        </li>
+        <li data="price">
+            <cui-icon class="disc">
+                <svg class="icon-dollar">
+                    <use xlink:href="#icon-dollar">
+                </svg>
+            </cui-icon>
+            <strong>Price</strong>
+        </li>
+        <li data="mileage">
+            <cui-icon>
+                <svg class="icon-mileage">
+                    <use xlink:href="#icon-mileage">
+                </svg>
+            </cui-icon>
+            <strong>Mileage</strong>
+        </li>
+        <li data="bodystyle">
+            <cui-icon>
+                <svg class="icon-compare">
+                    <use xlink:href="#icon-compare">
+                </svg>
+            </cui-icon>
+            <strong>Body Style</strong>
+        </li>
+        <li data="ext-color">
+            <cui-icon>
+                <svg class="icon-exterior">
+                    <use xlink:href="#icon-exterior">
+                </svg>
+            </cui-icon>
+            <strong>Ext Color</strong>
+        </li>
+        <li data="int-color">
+            <cui-icon>
+                <svg class="icon-interior">
+                    <use xlink:href="#icon-interior">
+                </svg>
+            </cui-icon>
+            <strong>Int Color</strong>
+        </li>
+        <li data="more" class="more-options">
+            <cui-icon>
+                <svg class="icon-ellipses">
+                    <use xlink:href="#icon-ellipses">
+                </svg>
+            </cui-icon>
+            <strong>More Options</strong>
+        </li>
+    </ul>
+</div>
+<div class="filter-menu-trigger">
+    <div class="button-bar-container">
+        <ul class="button-bar radio-list">
+            <li>
+                <label>
+                    <input checked="" type="radio" value="filter" class="js-open-filters">
+                    Filter
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" value="sort">
+                    Sort
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" value="save">
+                    Save
+                </label>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+$(".js-open-filters").on("click", function() {
+    $(".filter-menu").toggleClass("active");
+});
+</script>

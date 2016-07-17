@@ -1,0 +1,498 @@
+section {
+
+	margin: 0 auto;
+
+	h2 {
+		margin-bottom: 2.4rem;
+	}
+
+}
+
+.car-specs {
+	margin-bottom: 2.4rem;
+}
+
+.car-title {
+
+	margin-bottom: 3.2rem;
+
+	.link--parent {
+		margin-bottom: 0.8rem;
+	}
+
+}
+
+.car-details-wrap {
+	position: relative;
+}
+
+.car-header {
+
+	width: 100%;
+
+	@media (min-width: 1024px) {
+		width: 50%;
+	}
+
+	&__image {
+
+		margin-bottom: 1.6rem;
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+
+		@media (min-width: 1024px) {
+			margin-bottom: 0;
+		}
+
+	}
+
+}
+
+.car-details {
+
+	width: 100%;
+
+	@media (min-width: 1024px) {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 50%;
+		padding-left: 1.6rem;
+	}
+
+	&__placeholder {
+
+		display: inline-block;
+		height: 1.6rem;
+		width: 2rem;
+		background-color: $lighter-gray;
+
+		&.ph-mileage {
+			width: 5.6rem;
+		}
+
+		&.ph-vin {
+			width: 16.8rem;
+		}
+
+	}
+
+	&__mileage {
+
+		width: auto;
+
+		th, td {
+			padding: 0.5rem 2.4rem 0.5rem 0;
+		}
+
+		th {
+			font-weight: 400;
+			text-align: left;
+		}
+
+		td {
+			font-weight: 600;
+		}
+
+	}
+
+	&__profile-change {
+
+		border-top: solid 1px $light-gray;
+		padding: 1.6rem 0 0.8rem;
+		margin-top: 1.1rem;
+
+		p {
+			margin-bottom: 0.8rem;
+		}
+
+		li {
+			display: inline-block;
+			margin: 0 1.6rem 0.8rem 0;
+		}
+
+		.link {
+
+			cursor: pointer;
+			color: $accent-color-1;
+
+			&:hover {
+				color: $accent-color-2;
+			}
+
+		}
+
+	}
+
+	hr {
+		margin: 1.6rem 0;
+	}
+
+}
+
+.cio-recalls {
+
+	background-color: $lighter-gray;
+	margin-bottom: 2.4rem;
+	padding: 3.2rem 0;
+
+	&__title {
+		margin-bottom: 1.2rem;
+	}
+
+	p b {
+		font-family: $effrabold;
+	}
+
+	.recall-notify {
+
+		font-size: 1.6rem;
+		font-weight: 400;
+		line-height: 1.25;
+
+		button {
+
+			margin: 0;
+			display: inline;
+			padding: 0;
+			border: 0;
+			background: none;
+			color: $accent-color-1;
+			outline: none;
+
+			&:hover {
+				color: $accent-color-2;
+			}
+
+		}
+
+	}
+
+	.cui-button--secondary {
+		margin: 1.6rem 0;
+	}
+
+}
+
+.recall-modal {
+
+	&__title {
+		text-align: center;
+		margin: 0;
+	}
+
+	&__form {
+
+		max-width: 47.2rem;
+		margin: 0 auto;
+		padding: 3.2rem 0;
+
+		input {
+
+		}
+
+		button {
+			display: block;
+			width: 100%;
+			margin-top: 1.6rem;
+		}
+
+	}
+
+}
+
+.cio-service {
+
+	margin-bottom: 2.4rem;
+
+	&__repair {
+
+		float: left;
+		margin-bottom: 2.4rem;
+		width: 100%;
+		background: none;
+		border: 0;
+		text-align: left;
+		padding: 0;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		h3 {
+
+			margin-bottom: 0.5rem;
+
+			&:hover {
+				color: $black;
+			}
+
+		}
+
+		@media (min-width: $break1) {
+			float: left;
+			width: 33%;
+			margin: 0;
+		}
+
+		.repair-icon {
+
+			float: left;
+			width: 17%;
+
+			@media (min-width: $break1) and (max-width: 1023px) {
+
+				float: none;
+				margin-bottom: 0.8rem;
+				width: 100%;
+
+				img {
+					display: block;
+					margin: 0 auto;
+					width: 17%;
+				}
+
+			}
+
+		}
+		.repair-details {
+
+			float: right;
+			padding: 0 1.6rem 0 1rem;
+			width: 83%;
+
+			@media (min-width: $break1) and (max-width: 1023px) {
+
+				float: none;
+				width: 100%;
+
+				h3, p {
+					text-align: center;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+.cio-resale {
+
+	margin-bottom: 2.4rem;
+
+	&__content {
+
+		float: left;
+		padding: 0;
+		width: 100%;
+
+		@media (min-width: $break1) {
+			padding-top: 2.4rem;
+			border-top: solid 1px $light-gray;
+		}
+
+		h2 {
+			margin-bottom: 1.2rem;
+		}
+
+		.ownership {
+
+			padding-bottom: 2.4rem;
+			padding-right: 1.6rem;
+			width: 100%;
+
+			@media (min-width: $break1) {
+				float: left;
+				width: 50%;
+				padding-bottom: 0;
+			}
+
+			@media (min-width: 1024px) {
+				padding-right: 0;
+			}
+
+			p {
+				margin-bottom: 1rem;
+			}
+
+			p span {
+				font-weight: 700;
+				font-size: 2rem;
+			}
+
+		}
+
+		.resale-value {
+
+			border-top: 0.1rem $light-gray solid;
+			padding-top: 2.4rem;
+			width: 100%;
+			position: relative;
+
+			&.full-width {
+				border-top: 0;
+				padding-top: 0;
+			}
+
+			@media (min-width: $break1) {
+
+				border-top: 0;
+				padding: 0;
+
+				&.full-width {
+
+					width: 100%;
+					border: 0;
+					padding-left: 0;
+
+					p {
+						margin-bottom: 0;
+					}
+
+				}
+
+			}
+
+			p {
+
+				margin-bottom: 1rem;
+
+				span {
+					font-weight: 700;
+					font-size: 2rem;
+					display: inline-block;
+				}
+
+			}
+
+			.sell-price {
+				width: 100%;
+
+			}
+
+			&__prices {
+
+				position: relative;
+
+				@media (min-width: $break1) {
+					padding-right: 16rem;
+				}
+
+			}
+
+		}
+
+		.blackbook-logo {
+
+			padding-top: 0.8rem;
+
+			@media (min-width: $break1) {
+				padding: 0;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+			}
+
+		}
+
+	}
+
+}
+.cio-news {
+
+	padding-bottom: 0;
+
+	&__content {
+
+		border-top: 0.1rem $light-gray solid;
+		padding: 2.4rem 0 1.6rem;
+
+		.list-article, .list-article__view-all {
+			padding: 0;
+		}
+
+	}
+	&__reviews {
+
+		border-top: 0.1rem $light-gray solid;
+		float: left;
+		padding: 2.4rem 0;
+		width: 100%;
+
+		.consumer-reviews, .dealer-reviews {
+
+			width: 100%;
+
+			@media (min-width: $break1) {
+				float: left;
+				width: 50%;
+			}
+
+			h4 {
+				margin-bottom: 1rem;
+			}
+
+			.reviews-link {
+				display: inline-block;
+				margin: 1rem 0;
+			}
+
+		}
+
+		.consumer-reviews {
+
+			border-bottom: 0.1rem $light-gray solid;
+			padding-bottom: 1.6rem;
+
+			@media (min-width: $break1) {
+				border-bottom: 0;
+				border-right: 0.1rem $light-gray solid;
+			}
+
+		}
+
+		.dealer-reviews {
+
+			padding-top: 2.4rem;
+
+			@media (min-width: $break1) {
+				padding-left: 1.6rem;
+				padding-top: 0;
+			}
+
+		}
+
+	}
+
+}
+
+.cio-blackbook {
+
+	&__notify {
+		border-top: 0.1rem $light-gray solid;
+		padding: 2.4rem 0 0;
+	}
+
+}
+
+.dialog.repair-modal .dialog__content{
+
+	.zip-wrap {
+		display: flex;
+	}
+
+	[type="text"] {
+		width: 50%;
+	}
+
+	.cui-button {
+		width: 50%;
+		margin-left: 1.6rem;
+	}
+
+}

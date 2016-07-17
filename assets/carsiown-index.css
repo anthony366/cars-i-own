@@ -1,0 +1,688 @@
+:root {
+  --break-tablet: 504px;
+  --break-desktop: 1024px;
+  --break-max: 1170px;
+  --width-ten: 973px; }
+
+.page-carsiown .container::after, .car-added .car-select::after, .car-listings::after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.carsiown-nav .global-nav {
+  background: #250858; }
+  @media (min-width: 504px) {
+    .carsiown-nav .global-nav {
+      padding-right: 1rem; } }
+  .carsiown-nav .global-nav .container {
+    padding: 0; }
+
+.carsiown-nav .global-nav__extra {
+  display: block;
+  border-bottom: solid 1px #e1e1e1; }
+
+.carsiown-nav .global-nav__profile-trigger.active {
+  background-color: rgba(255, 255, 255, 0.2); }
+
+@media (min-width: 768px) {
+  .carsiown-nav .global-nav__profile-trigger {
+    -ms-flex-order: 3;
+    -webkit-order: 3;
+            order: 3; } }
+
+.carsiown-nav .global-nav__icon--profile {
+  position: relative; }
+  .carsiown-nav .global-nav__icon--profile svg {
+    fill: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6); }
+    .carsiown-nav .global-nav__icon--profile svg.login {
+      fill: rgba(255, 255, 255, 0.6);
+      color: rgba(255, 255, 255, 0.6); }
+  .carsiown-nav .global-nav__icon--profile .global-nav__profile-count {
+    background-color: #a400b4;
+    border-radius: 1rem;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    height: 0.5rem;
+    right: 1.3rem;
+    line-height: 0.4;
+    position: absolute;
+    padding: 0.35rem 0.369rem;
+    text-align: center;
+    top: 1.1rem;
+    -webkit-transform: translate(50%, -50%);
+            transform: translate(50%, -50%); }
+  .carsiown-nav .global-nav__icon--profile.logout-icon {
+    display: block; }
+  .carsiown-nav .global-nav__icon--profile.login-icon {
+    display: none; }
+
+.carsiown-nav .extra-menu__heading {
+  color: #532380;
+  margin-bottom: 1.6rem;
+  padding: 0 1.6rem; }
+  @media (min-width: 504px) {
+    .carsiown-nav .extra-menu__heading {
+      text-align: center; } }
+
+.carsiown-nav .global-nav__login {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto 3.2rem;
+  padding: 0 0.8rem; }
+  @media (min-width: 504px) {
+    .carsiown-nav .global-nav__login {
+      width: 35.70rem; } }
+  .carsiown-nav .global-nav__login .cui-button--secondary {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin: 0 0.8rem; }
+
+.carsiown-nav .global-nav__logout {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2.4rem 1.6rem 0;
+  margin: 0 auto; }
+  @media (min-width: 504px) {
+    .carsiown-nav .global-nav__logout {
+      clear: both;
+      width: 35.70rem; } }
+
+.carsiown-nav .global-nav__sub-menu ul {
+  border-bottom: 0;
+  display: block;
+  padding: 0; }
+  @media (min-width: 504px) {
+    .carsiown-nav .global-nav__sub-menu ul {
+      width: 70%;
+      max-width: 97.5rem;
+      margin: 0 auto;
+      text-align: center;
+      -webkit-column-gap: 1.6rem;
+         -moz-column-gap: 1.6rem;
+              column-gap: 1.6rem;
+      -webkit-column-rule: 0.1rem solid #e1e1e1;
+         -moz-column-rule: 0.1rem solid #e1e1e1;
+              column-rule: 0.1rem solid #e1e1e1; }
+      .carsiown-nav .global-nav__sub-menu ul.anonymous {
+        -webkit-column-count: 2;
+           -moz-column-count: 2;
+                column-count: 2; }
+      .carsiown-nav .global-nav__sub-menu ul.logged-in {
+        -webkit-column-count: 3;
+           -moz-column-count: 3;
+                column-count: 3; } }
+  .carsiown-nav .global-nav__sub-menu ul li {
+    border-bottom: 0.1rem solid #e1e1e1;
+    position: relative; }
+    @media (min-width: 504px) {
+      .carsiown-nav .global-nav__sub-menu ul li {
+        border-bottom: 0;
+        page-break-inside: avoid;
+        margin-bottom: 0.8rem; } }
+  .carsiown-nav .global-nav__sub-menu ul a {
+    color: #666666;
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.25;
+    padding: 1.1rem 1.6rem;
+    width: 100%; }
+    .carsiown-nav .global-nav__sub-menu ul a:hover {
+      background-color: #f2f2f2; }
+    @media (min-width: 504px) {
+      .carsiown-nav .global-nav__sub-menu ul a {
+        text-align: center;
+        padding: 0.8rem 0; } }
+  .carsiown-nav .global-nav__sub-menu ul cui-icon {
+    position: absolute;
+    right: 2.4rem;
+    top: 1.5rem;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg); }
+    @media (min-width: 504px) {
+      .carsiown-nav .global-nav__sub-menu ul cui-icon {
+        display: none; } }
+    .carsiown-nav .global-nav__sub-menu ul cui-icon svg {
+      fill: #bfbfbf;
+      color: #bfbfbf; }
+
+.carsiown-nav .global-nav__menu-trigger {
+  height: 4.8rem;
+  width: 4.8rem;
+  padding-top: 1.6rem;
+  cursor: pointer; }
+  @media all and (min-width: 768px) {
+    .carsiown-nav .global-nav__menu-trigger {
+      display: none; } }
+  .carsiown-nav .global-nav__menu-trigger span, .carsiown-nav .global-nav__menu-trigger::before, .carsiown-nav .global-nav__menu-trigger::after {
+    display: block;
+    height: 0.1rem;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 0 auto 0.7rem;
+    transition: none; }
+  .carsiown-nav .global-nav__menu-trigger.active {
+    background-color: rgba(255, 255, 255, 0.2); }
+  .carsiown-nav .global-nav__menu-trigger.active span {
+    opacity: 1; }
+  .carsiown-nav .global-nav__menu-trigger.active::before {
+    display: block;
+    -webkit-transform: none;
+            transform: none;
+    height: 0.1rem;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 0 auto 0.7rem;
+    transition: none; }
+  .carsiown-nav .global-nav__menu-trigger.active::after {
+    -webkit-transform: none;
+            transform: none;
+    display: block;
+    height: 0.1rem;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 0 auto 0.7rem;
+    transition: none; }
+
+.page-carsiown .container {
+  padding: 0 1.6rem; }
+  @media (min-width: 120rem) {
+    .page-carsiown .container {
+      max-width: 117rem;
+      padding: 0; } }
+
+.alert--success {
+  margin: 0 0 2.4rem; }
+
+.landing-page-header {
+  padding-bottom: 3.2rem; }
+  .landing-page-header.no-cars {
+    border-bottom: solid 1px #e1e1e1; }
+  .landing-page-header h2 {
+    margin: 0 0 1.6rem;
+    text-align: left; }
+  .landing-page-header h2.login-header {
+    margin: 0 0 1.6rem; }
+
+.login {
+  border-bottom: 0; }
+
+.car-added {
+  padding: 3.2rem 0 0; }
+  @media (min-width: 504px) {
+    .car-added {
+      margin-bottom: 20rem; } }
+  .car-added a.cui-button {
+    line-height: 1.25;
+    margin-bottom: 1.6rem; }
+  .car-added p {
+    margin-bottom: 0.5rem; }
+  .car-added .car-select {
+    margin-bottom: 0.4rem; }
+    .car-added .car-select p {
+      float: left;
+      margin: 0 1.6rem 0 0; }
+    .car-added .car-select ul {
+      float: left;
+      margin: 0.4rem 0;
+      width: 100%; }
+      @media (min-width: 1024px) {
+        .car-added .car-select ul {
+          margin: 0;
+          width: 63%; } }
+      .car-added .car-select ul li {
+        float: left;
+        margin-right: 1.6rem; }
+        .car-added .car-select ul li a {
+          display: block;
+          padding: 0.4rem 0; }
+  .car-added .cui-epsilion {
+    clear: both;
+    font-weight: 600;
+    margin: 0.4rem 0; }
+
+.page-carsiown .page-title h2 {
+  margin: 0;
+  text-align: center; }
+
+.carsiown-form {
+  margin: 0 auto;
+  max-width: 47.20rem; }
+  @media (min-width: 504px) {
+    .carsiown-form {
+      margin-bottom: 12rem; } }
+  .carsiown-form fieldset {
+    margin: 0; }
+  .carsiown-form.ng-submitted select.ng-invalid-required,
+  .carsiown-form.ng-submitted input.has-error {
+    border: solid 1px #cc1100; }
+  .carsiown-form .alert.alert--error {
+    display: none;
+    margin: 2.4rem 0 1.6rem; }
+    .carsiown-form .alert.alert--error.error-active {
+      display: block; }
+  .carsiown-form .form-header {
+    border: 0;
+    margin-bottom: 1.6rem;
+    padding: 0 0.4rem; }
+  .carsiown-form .fieldset {
+    margin: 0; }
+  .carsiown-form .input {
+    clear: both;
+    margin: 0 0 1.6rem; }
+    .carsiown-form .input:last-child {
+      margin-bottom: 0; }
+  .carsiown-form .helper-text {
+    display: none; }
+    .carsiown-form .helper-text.error-active {
+      display: block; }
+  .carsiown-form .cui-button {
+    margin-top: 1.6rem;
+    width: 100%; }
+  .carsiown-form .field-col--half {
+    float: left;
+    margin: 0 0 1.6rem;
+    width: calc(50% - 0.8rem); }
+  .carsiown-form .mileage {
+    margin-right: 1.6rem; }
+
+.car-listings {
+  background-color: #f2f2f2;
+  border-top: 2px solid #e1e1e1;
+  padding: 3.2rem 1.6rem; }
+  @media (min-width: 504px) {
+    .car-listings {
+      padding: 2.4rem 1.6rem; } }
+
+.car-listing {
+  padding: 0 0 2.4rem;
+  position: relative;
+  margin: 0 auto 2.4rem; }
+  @media (min-width: 504px) {
+    .car-listing {
+      padding: 1.6rem; } }
+  .car-listing:last-child {
+    margin-bottom: 0; }
+  .car-listing__image {
+    display: block;
+    margin-bottom: 1.6rem; }
+    @media (min-width: 504px) {
+      .car-listing__image {
+        float: left;
+        width: 25%;
+        margin: 0; } }
+    .car-listing__image img {
+      display: block; }
+  .car-listing__details {
+    padding: 0 1.6rem; }
+    @media (min-width: 504px) {
+      .car-listing__details {
+        float: left;
+        width: 50%; } }
+    .car-listing__details .confirmation {
+      color: #098ae4;
+      border: 0;
+      background: none;
+      outline: none;
+      padding: 0; }
+      .car-listing__details .confirmation:hover {
+        color: #004d81; }
+  .car-listing__nickname {
+    margin: 0 0 0.8rem; }
+  .car-listing__title {
+    color: #333333;
+    margin: 0 0 0.8rem; }
+    .car-listing__title a {
+      color: currentColor; }
+      .car-listing__title a:hover {
+        color: currentColor; }
+  .car-listing .dialog {
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute; }
+  .car-listing .dialog__content {
+    border: 0;
+    width: auto;
+    height: auto;
+    background: none;
+    max-height: 100%;
+    max-width: 100%;
+    min-height: 0;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+  .car-listing .dialog__content-body {
+    margin: 0;
+    padding: 0;
+    min-height: 0; }
+    .car-listing .dialog__content-body p {
+      margin-bottom: 1.6rem;
+      text-align: center; }
+    .car-listing .dialog__content-body .modal-buttons {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .car-listing .dialog__content-body button {
+      -webkit-flex: 0.5;
+          -ms-flex: 0.5;
+              flex: 0.5; }
+    .car-listing .dialog__content-body button:first-child {
+      background-color: #ffffff;
+      margin-right: 1.6rem; }
+
+section {
+  margin: 0 auto; }
+  section h2 {
+    margin-bottom: 2.4rem; }
+
+.car-specs {
+  margin-bottom: 2.4rem; }
+
+.car-title {
+  margin-bottom: 3.2rem; }
+  .car-title .link--parent {
+    margin-bottom: 0.8rem; }
+
+.car-details-wrap {
+  position: relative; }
+
+.car-header {
+  width: 100%; }
+  @media (min-width: 1024px) {
+    .car-header {
+      width: 50%; } }
+  .car-header__image {
+    margin-bottom: 1.6rem; }
+    .car-header__image img {
+      display: block;
+      width: 100%;
+      height: auto; }
+    @media (min-width: 1024px) {
+      .car-header__image {
+        margin-bottom: 0; } }
+
+.car-details {
+  width: 100%; }
+  @media (min-width: 1024px) {
+    .car-details {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      padding-left: 1.6rem; } }
+  .car-details__placeholder {
+    display: inline-block;
+    height: 1.6rem;
+    width: 2rem;
+    background-color: #f2f2f2; }
+    .car-details__placeholder.ph-mileage {
+      width: 5.6rem; }
+    .car-details__placeholder.ph-vin {
+      width: 16.8rem; }
+  .car-details__mileage {
+    width: auto; }
+    .car-details__mileage th, .car-details__mileage td {
+      padding: 0.5rem 2.4rem 0.5rem 0; }
+    .car-details__mileage th {
+      font-weight: 400;
+      text-align: left; }
+    .car-details__mileage td {
+      font-weight: 600; }
+  .car-details__profile-change {
+    border-top: solid 1px #e1e1e1;
+    padding: 1.6rem 0 0.8rem;
+    margin-top: 1.1rem; }
+    .car-details__profile-change p {
+      margin-bottom: 0.8rem; }
+    .car-details__profile-change li {
+      display: inline-block;
+      margin: 0 1.6rem 0.8rem 0; }
+    .car-details__profile-change .link {
+      cursor: pointer;
+      color: #098ae4; }
+      .car-details__profile-change .link:hover {
+        color: #004d81; }
+  .car-details hr {
+    margin: 1.6rem 0; }
+
+.cio-recalls {
+  background-color: #f2f2f2;
+  margin-bottom: 2.4rem;
+  padding: 3.2rem 0; }
+  .cio-recalls__title {
+    margin-bottom: 1.2rem; }
+  .cio-recalls p b {
+    font-family: "Effra Bold", "Helvetica Neue", HelveticaNeue, Helvetica-Neue, "Arial Black", sans-serif; }
+  .cio-recalls .recall-notify {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.25; }
+    .cio-recalls .recall-notify button {
+      margin: 0;
+      display: inline;
+      padding: 0;
+      border: 0;
+      background: none;
+      color: #098ae4;
+      outline: none; }
+      .cio-recalls .recall-notify button:hover {
+        color: #004d81; }
+  .cio-recalls .cui-button--secondary {
+    margin: 1.6rem 0; }
+
+.recall-modal__title {
+  text-align: center;
+  margin: 0; }
+
+.recall-modal__form {
+  max-width: 47.2rem;
+  margin: 0 auto;
+  padding: 3.2rem 0; }
+  .recall-modal__form button {
+    display: block;
+    width: 100%;
+    margin-top: 1.6rem; }
+
+.cio-service {
+  margin-bottom: 2.4rem; }
+  .cio-service__repair {
+    float: left;
+    margin-bottom: 2.4rem;
+    width: 100%;
+    background: none;
+    border: 0;
+    text-align: left;
+    padding: 0; }
+    .cio-service__repair:last-child {
+      margin-bottom: 0; }
+    .cio-service__repair h3 {
+      margin-bottom: 0.5rem; }
+      .cio-service__repair h3:hover {
+        color: #333333; }
+    @media (min-width: 504px) {
+      .cio-service__repair {
+        float: left;
+        width: 33%;
+        margin: 0; } }
+    .cio-service__repair .repair-icon {
+      float: left;
+      width: 17%; }
+      @media (min-width: 504px) and (max-width: 1023px) {
+        .cio-service__repair .repair-icon {
+          float: none;
+          margin-bottom: 0.8rem;
+          width: 100%; }
+          .cio-service__repair .repair-icon img {
+            display: block;
+            margin: 0 auto;
+            width: 17%; } }
+    .cio-service__repair .repair-details {
+      float: right;
+      padding: 0 1.6rem 0 1rem;
+      width: 83%; }
+      @media (min-width: 504px) and (max-width: 1023px) {
+        .cio-service__repair .repair-details {
+          float: none;
+          width: 100%; }
+          .cio-service__repair .repair-details h3, .cio-service__repair .repair-details p {
+            text-align: center; } }
+
+.cio-resale {
+  margin-bottom: 2.4rem; }
+  .cio-resale__content {
+    float: left;
+    padding: 0;
+    width: 100%; }
+    @media (min-width: 504px) {
+      .cio-resale__content {
+        padding-top: 2.4rem;
+        border-top: solid 1px #e1e1e1; } }
+    .cio-resale__content h2 {
+      margin-bottom: 1.2rem; }
+    .cio-resale__content .ownership {
+      padding-bottom: 2.4rem;
+      padding-right: 1.6rem;
+      width: 100%; }
+      @media (min-width: 504px) {
+        .cio-resale__content .ownership {
+          float: left;
+          width: 50%;
+          padding-bottom: 0; } }
+      @media (min-width: 1024px) {
+        .cio-resale__content .ownership {
+          padding-right: 0; } }
+      .cio-resale__content .ownership p {
+        margin-bottom: 1rem; }
+      .cio-resale__content .ownership p span {
+        font-weight: 700;
+        font-size: 2rem; }
+    .cio-resale__content .resale-value {
+      border-top: 0.1rem #e1e1e1 solid;
+      padding-top: 2.4rem;
+      width: 100%;
+      position: relative; }
+      .cio-resale__content .resale-value.full-width {
+        border-top: 0;
+        padding-top: 0; }
+      @media (min-width: 504px) {
+        .cio-resale__content .resale-value {
+          border-top: 0;
+          padding: 0; }
+          .cio-resale__content .resale-value.full-width {
+            width: 100%;
+            border: 0;
+            padding-left: 0; }
+            .cio-resale__content .resale-value.full-width p {
+              margin-bottom: 0; } }
+      .cio-resale__content .resale-value p {
+        margin-bottom: 1rem; }
+        .cio-resale__content .resale-value p span {
+          font-weight: 700;
+          font-size: 2rem;
+          display: inline-block; }
+      .cio-resale__content .resale-value .sell-price {
+        width: 100%; }
+      .cio-resale__content .resale-value__prices {
+        position: relative; }
+        @media (min-width: 504px) {
+          .cio-resale__content .resale-value__prices {
+            padding-right: 16rem; } }
+    .cio-resale__content .blackbook-logo {
+      padding-top: 0.8rem; }
+      @media (min-width: 504px) {
+        .cio-resale__content .blackbook-logo {
+          padding: 0;
+          position: absolute;
+          right: 0;
+          bottom: 0; } }
+
+.cio-news {
+  padding-bottom: 0; }
+  .cio-news__content {
+    border-top: 0.1rem #e1e1e1 solid;
+    padding: 2.4rem 0 1.6rem; }
+    .cio-news__content .list-article, .cio-news__content .list-article__view-all {
+      padding: 0; }
+  .cio-news__reviews {
+    border-top: 0.1rem #e1e1e1 solid;
+    float: left;
+    padding: 2.4rem 0;
+    width: 100%; }
+    .cio-news__reviews .consumer-reviews, .cio-news__reviews .dealer-reviews {
+      width: 100%; }
+      @media (min-width: 504px) {
+        .cio-news__reviews .consumer-reviews, .cio-news__reviews .dealer-reviews {
+          float: left;
+          width: 50%; } }
+      .cio-news__reviews .consumer-reviews h4, .cio-news__reviews .dealer-reviews h4 {
+        margin-bottom: 1rem; }
+      .cio-news__reviews .consumer-reviews .reviews-link, .cio-news__reviews .dealer-reviews .reviews-link {
+        display: inline-block;
+        margin: 1rem 0; }
+    .cio-news__reviews .consumer-reviews {
+      border-bottom: 0.1rem #e1e1e1 solid;
+      padding-bottom: 1.6rem; }
+      @media (min-width: 504px) {
+        .cio-news__reviews .consumer-reviews {
+          border-bottom: 0;
+          border-right: 0.1rem #e1e1e1 solid; } }
+    .cio-news__reviews .dealer-reviews {
+      padding-top: 2.4rem; }
+      @media (min-width: 504px) {
+        .cio-news__reviews .dealer-reviews {
+          padding-left: 1.6rem;
+          padding-top: 0; } }
+
+.cio-blackbook__notify {
+  border-top: 0.1rem #e1e1e1 solid;
+  padding: 2.4rem 0 0; }
+
+.dialog.repair-modal .dialog__content .zip-wrap {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.dialog.repair-modal .dialog__content [type="text"] {
+  width: 50%; }
+
+.dialog.repair-modal .dialog__content .cui-button {
+  width: 50%;
+  margin-left: 1.6rem; }
+
+.cio-auth-form {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 4.8rem 0; }
+  .cio-auth-form .cui-beta,
+  .cio-auth-form p {
+    text-align: center; }
+  .cio-auth-form p {
+    margin: 1.6rem 0; }
+  .cio-auth-form input {
+    max-width: 100%;
+    margin-bottom: 1.6rem; }
+  .cio-auth-form button {
+    width: 100%;
+    display: block; }
+
+.proto-carsiown {
+  padding-top: 4.8rem; }
+  .proto-carsiown .page-body {
+    max-width: none;
+    padding: 4.8rem 0; }
+  .proto-carsiown .global-nav__menu.mobile-menu-open {
+    display: block; }
+    @media (min-width: 768px) {
+      .proto-carsiown .global-nav__menu.mobile-menu-open {
+        display: -webkit-flex !important;
+        display: -ms-flexbox !important;
+        display: flex !important; } }
+
+/*# sourceMappingURL=../../../maps/cars-i-own/assets/scss/carsiown-index.css.map */

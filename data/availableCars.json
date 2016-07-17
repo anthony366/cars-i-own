@@ -1,0 +1,230 @@
+[
+  {
+    "optId": "car001",
+    "year": "2000",
+    "make": "Lamborghini",
+    "model": "Murcielago",
+    "thumb": "assets/images/car-lambo@2x.jpg",
+    "trims": [
+      {
+        "trimName": "LP640 Roadster"
+      }
+    ]
+  },
+  {
+    "optId": "car002",
+    "year": "2006",
+    "make": "Honda",
+    "model": "Accord",
+    "thumb": "assets/images/car-accord@2x.jpg",
+    "trims": [
+      {
+        "trimName": "Value Package"
+      },
+      {
+        "trimName": "LX"
+      },
+      {
+        "trimName": "SE"
+      },
+      {
+        "trimName": "EX"
+      },
+      {
+        "trimName": "3.0 LX"
+      },
+      {
+        "trimName": "3.0 EX"
+      }
+    ]
+  },
+  {
+    "optId": "car003",
+    "year": "2011",
+    "make": "Honda",
+    "model": "CRV",
+    "thumb": "assets/images/car-crv@2x.jpg",
+    "trims": [
+      {
+        "trimName": "LX"
+      },
+      {
+        "trimName": "SE"
+      },
+      {
+        "trimName": "EX"
+      },
+      {
+        "trimName": "EX-L"
+      }
+    ]
+  },
+  {
+    "optId": "car004",
+    "year": "2016",
+    "make": "Toyota",
+    "model": "Camry",
+    "thumb": "assets/images/car-camry@2x.jpg",
+    "trims": [
+      {
+        "trimName": "LE"
+      },
+      {
+        "trimName": "SE"
+      },
+      {
+        "trimName": "XSE"
+      },
+      {
+        "trimName": "XLE"
+      },
+      {
+        "trimName": "XLE V6"
+      },
+      {
+        "trimName": "XSE V6"
+      }
+    ]
+  },
+  {
+    "optId": "car005",
+    "year": "2006",
+    "make": "Ford",
+    "model": "Focus",
+    "thumb": "assets/images/car-focus@2x.jpg",
+    "trims": [
+      {
+        "trimName": "ZX3"
+      },
+      {
+        "trimName": "ZX3 S"
+      },
+      {
+        "trimName": "ZX5"
+      }
+    ]
+  },
+  {
+    "optId": "car006",
+    "year": "2014",
+    "make": "Ford",
+    "model": "Mustang",
+    "thumb": "assets/images/car-mustang@2x.jpg",
+    "trims": [
+      {
+        "trimName": "V6"
+      },
+      {
+        "trimName": "V6 Premium"
+      },
+      {
+        "trimName": "GT"
+      },
+      {
+        "trimName": "GT Premium"
+      }
+    ]
+  },
+  {
+    "optId": "car007",
+    "year": "2016",
+    "make": "Subaru",
+    "model": "WRX",
+    "thumb": "assets/images/car-wrx@2x.jpg",
+    "trims": [
+      {
+        "trimName": "Base"
+      },
+      {
+        "trimName": "Premium"
+      },
+      {
+        "trimName": "Limited"
+      },
+      {
+        "trimName": "STI"
+      },
+      {
+        "trimName": "STI HyperBlue"
+      },
+      {
+        "trimName": "STI Limited w/ Wing"
+      },
+      {
+        "trimName": "STI Limited w/ Lip"
+      }
+    ]
+  },
+  {
+    "optId": "car008",
+    "year": "2014",
+    "make": "Buick",
+    "model": "Regal",
+    "thumb": "assets/images/car-regal@2x.jpg",
+    "trims": [
+      {
+        "trimName": "Turbo"
+      },
+      {
+        "trimName": "eAssist"
+      },
+      {
+        "trimName": "Turbo Premium I Group"
+      },
+      {
+        "trimName": "Turbo Premium II Group"
+      }
+    ]
+  },
+  {
+    "optId": "car009",
+    "year": "2012",
+    "make": "Subaru",
+    "model": "Impreza",
+    "thumb": "assets/images/car-impreza@2x.jpg",
+    "trims": [
+      {
+        "trimName": "2.0i"
+      },
+      {
+        "trimName": "2.0i Premium"
+      },
+      {
+        "trimName": "2.0i Sport Premium"
+      },
+      {
+        "trimName": "2.0i Limited"
+      },
+      {
+        "trimName": "2.0i Sport Limited"
+      },
+      {
+        "trimName": "WRX"
+      },
+      {
+        "trimName": "WRX Premium"
+      },
+      {
+        "trimName": "WRX Limited"
+      }
+    ]
+  },
+  {
+    "optId": "car010",
+    "year": "2008",
+    "make": "Ford",
+    "model": "Escape",
+    "thumb": "assets/images/car-escape@2x.jpg",
+    "trims": [
+      {
+        "trimName": "XLS"
+      },
+      {
+        "trimName": "XLT"
+      },
+      {
+        "trimName": "Limited"
+      }
+    ]
+  }
+]

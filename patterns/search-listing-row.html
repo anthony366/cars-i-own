@@ -1,0 +1,65 @@
+<div class="card listing-row mobile-list-view">
+<div class="listing-row__info">
+	<div class="listing__image col-mb-5 col-4 col-dt-3">
+		<span class="flag flag--listing">Just Added</span>
+		<div class="media-count">
+			<a href>
+				<span>19 photos </span><span>1 video</span>
+			</a>
+
+		</div>
+		<img src="http://om.cars.com/dpl/html/om-img/srp_result.jpg" alt="car-image">
+	</div>
+
+	<div class="listing__details col-mb-7 col-8 col-dt-6">
+		<h2 class="cui-delta listing__title"><a href>New 2015 Toyota Camry LE</a></h2>
+		<div class="listing__save js-save" ng-include="'../../patterns/switch-favorite.html'"></div>
+		<span class="listing__price" ><sup>$</sup>21,091</span>
+		<span class="listing__msrp"><b>MSRP</b> $24,890</span>
+		<!-- <span class="listing__mileage">{{listing.miles}} <b>mi</b> </span> -->
+		<span class="listing__payment">$175 est/mo</span>
+		<div class="listing__meta">
+			<span class="listing__ext">Blue (ext)</span>
+			<span class="listing__int">Black (int)</span>
+			<span class="listing__more">6-Speed Automatic | FWD</span>
+		</div>
+		<div class="listing__offers col-mb-12">
+			<a class="text__icon text__icon--special">
+				<cui-icon>
+					<svg class="icon-tags">
+						<use xlink:href="#icon-tags">
+					</svg>
+				</cui-icon>
+				<span>Special Offers</span>
+			</a>
+			<a class="text__icon">
+				<cui-icon>
+					<svg class="icon-certified">
+						<use xlink:href="#icon-certified">
+					</svg>
+				</cui-icon>
+				<span>Toyota Certified</span>
+			</a>
+			<a class="text__icon">
+				<cui-icon>
+					<svg class="icon-document">
+						<use xlink:href="#icon-document">
+					</svg>
+				</cui-icon>
+				<span>CARFAX Report</span>
+			</a>
+		</div>
+	</div>
+
+</div>
+
+    <div class="col-12 col-dt-3 col-mb-12 listing__dealer-info">
+        <span class="listing__dealer-name col-9 col-mb-8 col-dt-12">
+         Shaumburg Toyota/Scion
+        </span>
+        <span class="listing__distance col-3 col-mb-4 col-dt-12">27 <b>mi away</b></span>
+        <span class="listing__phone col-dt-12">(888) 437-3574</span>
+        <span class="listing__contact col-dt-12"><a href="#">Check Availability</a></span>
+		<span class="listing__similar-cars col-12 col-mb-12" ng-if="listing.type === 'Certified'"><a href="#">Similar cars at this dealership</a></span>
+    </div>
+</div>

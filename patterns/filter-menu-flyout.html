@@ -1,0 +1,81 @@
+<div class="flyout">
+    <div class="flyout__header">
+        <span class="flyout__title cui-gamma">Menu Title
+            <div class="icon--target">
+                <cui-icon class="js-close">
+                    <svg class="icon-close">
+                        <use xlink:href="#icon-close">
+                    </svg>
+                </cui-icon>
+            </div>
+        </span>
+    </div>
+    <div class="flyout__content">
+        <ul class="flyout__list">
+            <li>
+                <a>Item
+                    <cui-icon>
+                        <svg class="icon-chevron">
+                            <use xlink:href="#icon-chevron">
+                        </svg>
+                    </cui-icon>
+                </a>
+            </li>
+            <li>
+                <a>Item
+                    <cui-icon>
+                        <svg class="icon-chevron">
+                            <use xlink:href="#icon-chevron">
+                        </svg>
+                    </cui-icon>
+                </a>
+            </li>
+            <li>
+                <a>Item
+                    <cui-icon>
+                        <svg class="icon-chevron">
+                            <use xlink:href="#icon-chevron">
+                        </svg>
+                    </cui-icon>
+                </a>
+            </li>
+            <li>
+                <a>Item
+                    <cui-icon>
+                        <svg class="icon-chevron">
+                            <use xlink:href="#icon-chevron">
+                        </svg>
+                    </cui-icon>
+                </a>
+            </li>
+            <li>
+                <a>Item
+                    <cui-icon>
+                        <svg class="icon-chevron">
+                            <use xlink:href="#icon-chevron">
+                        </svg>
+                    </cui-icon>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="flyout__footer">
+        <form>
+            <input type="text" placeholder="Additonal Keywords">
+            <div class="select">
+                <span class="dropdown">
+                    <select class="sortjump">
+                        <option value="" selected="selected">Match All</option>
+                    </select>
+                </span>
+            </div>
+            <button class="cui-button cui-button--fluid">Apply Keywords</button>
+        </form>
+    </div>
+</div>
+
+<script>
+$(".flyout__list li").on("click", function() {
+    $(".flyout__list li").removeClass("selected");
+    $(this).addClass("selected");
+});

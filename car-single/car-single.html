@@ -1,0 +1,321 @@
+<section class="car-specs">
+	<div class="container">
+		<div class="car-title">
+			<a ui-sref="cars.index" class="link--parent">
+				<cui-icon>
+					<svg class="icon-arrowhead">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrowhead">
+						</use>
+					</svg>
+				</cui-icon>
+				Cars I Own
+			</a>
+			<h1 class="cui-alpha" ng-if="car.nickname">&quot;{{car.nickname}}&quot;</h1>
+			<p class="cui-beta">{{carName(car)}}</p>
+		</div>
+
+		<div class="car-details-wrap">
+
+			<div class="car-header">
+				<div class="car-header__image">
+					<img ng-src="{{ carThumb(car) }}" />
+				</div>
+			</div>
+
+			<div class="car-details">
+				<table class="car-details__mileage">
+					<tr>
+						<th>Mileage</th>
+						<th>VIN</th>
+					</tr>
+					<tr>
+						<td>
+							<span ng-show="car.mileage">{{car.mileage | number}}</span>
+							<span ng-show="!car.mileage" class="car-details__placeholder ph-mileage"></span>
+						</td>
+						<td>
+							<span ng-show="car.vin">{{car.vin}}</span>
+							<span ng-show="!car.vin" class="car-details__placeholder ph-vin"></span>
+						</td>
+					</tr>
+				</table>
+				<div class="car-details__profile-change">
+					<p ng-show="!car.mileage || car.mileage == ''">Want to see more information about your car? Just <a ui-sref="car.edit({id: car.id})">add details</a>.</p>
+					<ul>
+						<li ng-show="car.mileage"><a ui-sref="car.edit({id: car.id})">Edit my car</a></li>
+						<li ng-show="!getItem('carimage-' + car.id)" flow-init flow-files-submitted="imageSuccess($flow)" flow-file-success="setItem('test', 'asdfasd')">
+							<span class="link" flow-btn>Change photo</span>
+						</li>
+						<li ng-show="getItem('carimage-' + car.id)" ><span class="link" ng-click="removePhoto(car)">Remove photo</span></li>
+						<li><a href="#">See Specs &amp; Warranty</a></li>
+					</ul>
+				</div>
+			</div>
+
+			{{carimage}}
+
+		</div>
+		<!-- /car-detail-wrap -->
+
+	</div>
+</section>
+
+<section class="cio-recalls">
+	<div class="container">
+		<h2 class="cio-recalls__title cui-beta">Recalls</h2>
+		<p class="cui-gamma--secondary">There are currently <b>4</b> recalls for your car.</p>
+		<button class="cui-button--secondary">See Your Recalls</button>
+		<p ng-show="!getItem('recallSubscribed')" class="cui-zeta recall-notify">
+			<strong>Stay Safe &amp; Informed:</strong> <button ng-click="recallModal = !recallModal">Create a recall for alerts</button>, and we'll notify you when new recalls are added for your car.
+		</p>
+		<p ng-show="getItem('recallSubscribed')" class="cui-zeta recall-notify">
+			<strong>Stay Safe &amp; Informed:</strong> We'll notify you at {{params.email}} when we receive new recalls for your car. <button ng-click="recallUnsubscribeModal = !recallUnsubscribeModal; recallUnsubscribe()">Turn off recall alerts</button>.
+		</p>
+
+		<div class="dialog recall-modal ng-scope" ng-show="recallModal">
+			<div class="dialog__content">
+				<div class="dialog__content-head">
+					<div class="icon--target js-close">
+						<cui-icon ng-click="recallModal = !recallModal">
+							<svg class="icon-close">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+								</use>
+							</svg>
+						</cui-icon>
+					</div>
+				</div>
+				<div class="dialog__content-body">
+					<h2 class="recall-modal__title cui-beta">Create a Recall Alert</h2>
+					<form class="recall-modal__form" ng-submit="recallSubscribe(params)">
+						<label>Email</label>
+						<input type="email" ng-model="params.email" name="email">
+						<button class="cui-button" ng-click="recallSubscribe(); recallModal = !recallModal; recallModalConfirm = !recallModalConfirm">Get Recall Alerts</button>
+					</form>
+				</div>
+			</div>
+		</div><!-- recall-modal -->
+
+		<div class="dialog recall-modal-confirm" ng-show="recallModalConfirm">
+			<div class="dialog__content">
+				<div class="dialog__content-head">
+					<div class="icon--target js-close">
+						<cui-icon ng-click="recallModalConfirm = !recallModalConfirm">
+							<svg class="icon-close">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+								</use>
+							</svg>
+						</cui-icon>
+					</div>
+				</div>
+				<div class="dialog__content-body">
+					<div class="alert alert--success">
+						<cui-icon class="alert__icon">
+							<svg class="icon-check">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-check"></use>
+								</use>
+							</svg>
+						</cui-icon>
+						<h5 class="cui-epsilon heading--alert">Almost there!</h5>
+						<p class="alert__content">Just check your inbox to verify your email address.</p>
+					</div>
+					<p>We sent an email to <strong>{{params.email}}</strong> with a link to verify your email address. Once verified, your alert will be activated. If you don't see the email, please check your Spam folder.</p>
+				</div>
+			</div>
+		</div><!-- recall-modal-confirm -->
+
+		<div class="dialog recall-unsubscribe-modal" ng-show="recallUnsubscribeModal">
+			<div class="dialog__content">
+				<div class="dialog__content-head">
+					<div class="icon--target js-close">
+						<cui-icon ng-click="recallUnsubscribeModal = !recallUnsubscribeModal">
+							<svg class="icon-close">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+								</use>
+							</svg>
+						</cui-icon>
+					</div>
+				</div>
+				<div class="dialog__content-body">
+					<div class="alert alert--success">
+						<cui-icon class="alert__icon">
+							<svg class="icon-check">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-check"></use>
+								</use>
+							</svg>
+						</cui-icon>
+						<h5 class="cui-epsilon heading--alert">Success!</h5>
+						<p class="alert__content">You won’t receive recall alerts anymore.</p>
+					</div>
+				</div>
+			</div>
+		</div><!-- recall-modal-confirm -->
+
+	</div>
+</section>
+
+<section class="cio-service">
+	<div class="container">
+		<h2 class="cui-beta">Service &amp; Repair Tools</h2>
+		<button class="cio-service__repair" ng-click="repairModal = !repairModal">
+			<div class="repair-icon">
+				<img src="assets/images/service-tools-1.svg" alt="Explore nearby service centers" />
+			</div>
+			<div class="repair-details">
+				<h3 class="cui-epsilon">Explore Nearby Service Centers</h3>
+				<p>Read reviews, compare details and find the best service center for you.</p>
+			</div>
+		</button>
+		<button class="cio-service__repair" ng-click="repairModal = !repairModal">
+			<div class="repair-icon">
+				<img src="assets/images/service-tools-2.svg" alt="Estimate Service &amp; Repair" />
+			</div>
+			<div class="repair-details">
+				<h3 class="cui-epsilon">Estimate Service &amp; Repair</h3>
+				<p>Get fair-price estimates from service centers in your area.</p>
+			</div>
+		</button>
+		<a class="cio-service__repair" href="https://www.cars.com/news/maintenance-101/">
+			<div class="repair-icon">
+				<img src="assets/images/service-tools-3.svg" alt="Service &amp; Repair Advice" />
+			</div>
+			<div class="repair-details">
+				<h3 class="cui-epsilon">Service &amp; Repair Advice</h3>
+				<p>Learn about maintenance and repairs from our car-care experts.</p>
+			</div>
+		</a>
+	</div>
+
+	<div class="dialog dialog--small repair-modal ng-scope" ng-show="repairModal">
+		<div class="dialog__content">
+			<div class="dialog__content-head">
+				<div class="icon--target js-close">
+					<cui-icon ng-click="repairModal = !repairModal">
+						<svg class="icon-close">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+							</use>
+						</svg>
+					</cui-icon>
+				</div>
+			</div>
+			<div class="dialog__content-body">
+				<h2 class="repair-modal__title cui-beta">Find a Service Center</h2>
+				<form class="repair-modal__form" ng-submit="zipLookup(params)">
+					<label>ZIP Code</label>
+					<div class="zip-wrap">
+						<input type="text" ng-model="params.zip" name="zip" allow-pattern="\d" maxlength="5">
+						<button class="cui-button" ng-click="repairModal = !repairModal">Search</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div><!-- recall-modal -->
+
+</section>
+
+<section class="cio-resale">
+	<div class="container">
+		<div class="cio-resale__content">
+
+			<div class="resale-value" ng-show="getItem('estimated')">
+				<h2 class="cui-beta">Estimated Resale Value</h2>
+				<p>Learn about hassle-free ways to <a href="#">sell your car</a>.</p>
+				<p><strong>Sell or Trade to Dealer*:</strong> <span>$1,910 - $3,000</span></p>
+				<div class="resale-value__prices">
+					<p class="sell-price"><strong>Sell It Yourself*:</strong> <span>$2,750 - $4,025</span> </p>
+					<div class="blackbook-logo"><img src="https://www.cars.com/images/core/icon-blackbook.png" /></div>
+				</div>
+			</div>
+
+			<div class="resale-value full-width" ng-hide="getItem('estimated')">
+				<h2 class="cui-beta">Estimated Resale Value</h2>
+				<p>Want to see your car's <a ui-sref="car.estimate({id: car.id})">resale value</a>? Learn about hassle-free ways to sell your car.</p>
+				<div class="blackbook-logo"><img src="https://www.cars.com/images/core/icon-blackbook.png" /></div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+<section class="cio-news">
+	<div class="container">
+		<div class="cio-news__content">
+			<h2 class="cui-beta">News &amp; Expert Reviews</h2>
+			<ul class="list-article list-article--a">
+				<li class="list-article__item">
+					<a href="">
+						<figure class="list-article__image">
+							<img src="assets/images/review01.jpg" alt="">
+						</figure>
+						<h4 class="list-article__title cui-delta">How Often Do I Need to Change My Brake Fluid?</h4>
+					</a>
+				</li>
+				<li class="list-article__item">
+					<a href="">
+						<figure class="list-article__image">
+							<img src="assets/images/review02.jpg" alt="">
+						</figure>
+						<h4 class="list-article__title cui-delta">How Do I Know When to Change My Brake Pads and Rotors?</h4>
+					</a>
+				</li>
+				<li class="list-article__item">
+					<a href="">
+						<figure class="list-article__image">
+							<img src="assets/images/review03.jpg" alt="">
+						</figure>
+						<h4 class="list-article__title cui-delta">Do I Have to Buy My Replacement Brakes From My Automaker?</h4>
+					</a>
+				</li>
+			</ul>
+			<p class="list-article__view-all"><a href="">View all articles</a></p>
+		</div>
+		<div class="cio-news__reviews">
+			<div class="consumer-reviews">
+				<h4 class="cui-gamma">Consumer Reviews</h4>
+				<div class="rating consumer value3_5">
+					<div class="rating-stars">
+						<cui-icon>
+							<svg class="star full">
+								<use xlink:href="#icon-star"></use>
+							</svg>
+						</cui-icon>
+						<cui-icon>
+							<svg class="star full">
+								<use xlink:href="#icon-star"></use>
+							</svg>
+						</cui-icon>
+						<cui-icon>
+							<svg class="star full">
+								<use xlink:href="#icon-star"></use>
+							</svg>
+						</cui-icon>
+						<cui-icon>
+							<svg class="star half">
+								<use xlink:href="#icon-star"></use>
+							</svg>
+						</cui-icon>
+						<cui-icon>
+							<svg class="star">
+								<use xlink:href="#icon-star"></use>
+							</svg>
+						</cui-icon>
+					</div>
+					<a href="#" class="rating-link">100 reviews</a>
+				</div>
+				<a href="#" class="reviews-link">Review your car</a>
+			</div>
+			<div class="dealer-reviews">
+				<h4 class="cui-gamma">Dealer Reviews</h4>
+				<a href="#" class="reviews-link">Review your dealer</a>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="cio-blackbook" ng-show="getItem('estimated')">
+	<div class="container">
+		<div class="cio-blackbook__notify">
+			<div class="disclaimer" style="margin-top: 0;">
+				<small>*Estimated resale value ranges are based on <a href="#">Black Book Car Conditions</a>. Learn more about <a href="#">estimated resale values</a>.</small>
+			</div>
+		</div>
+	</div>
+</section>

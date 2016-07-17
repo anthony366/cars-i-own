@@ -1,0 +1,92 @@
+<!-- Header & Navigation -->
+<div class="carsiown-nav" ng-include="'header/_header.html'"></div>
+
+<div class="container">
+	<div class="page-title">
+		<h2 class="cui-alpha">Add Your Car</h2>
+	</div>
+
+	<form
+		name="addCarForm"
+		class="carsiown-form"
+		ng-class="{'has-error': addCarForm.$submitted && addCarForm.$invalid}"
+		ng-submit="addCar(makeOptions, modelOptions, yearOptions)"
+		novalidate>
+		<!-- Error Alert -->
+		<div class="alert alert--error" ng-class="{'error-active': addCarForm.$submitted && addCarForm.$invalid}">
+			<cui-icon class="alert__close js-close">
+				<svg class="icon-close">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close">
+					</use>
+				</svg>
+			</cui-icon>
+			<cui-icon class="alert__icon">
+				<svg class="icon-exclamation-circle">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-exclamation-circle">
+					</use>
+				</svg>
+			</cui-icon>
+
+			<h5 class="cui-epsilon heading--alert ng-binding">We need more information.</h5>
+			<p class="alert__content ng-binding ng-scope">Please fix the errors below to save your car.</p>
+		</div>
+		<!-- End Error Alert -->
+
+		<p class="form-header">All fields are required</p>
+		<fieldset>
+			<div class="input">
+				<label>Make</label>
+				<div class="dropdown">
+
+					<select
+						ng-model="makeOptions"
+						ng-options="opt for opt in allMakes()"
+						name="make"
+						class="validateme"
+						required>
+						<option value="" disabled selected>Select a Make</option>
+					</select>
+
+					<p ng-class="{'error-active': addCarForm.$submitted && addCarForm.make.$invalid}" class="helper-text error">Enter your car's make.</p>
+
+				</div>
+			</div>
+			<div class="input">
+				<label>Model</label>
+				<div class="dropdown">
+
+					<select
+						ng-model="modelOptions"
+						ng-options="opt for opt in matchingModels(makeOptions)"
+						name="model"
+						class="validateme"
+						required>
+						<option value="" disabled selected>Select a Model</option>
+					</select>
+
+					<p ng-class="{'error-active': addCarForm.$submitted && addCarForm.model.$invalid}" class="helper-text error">Enter your car's model.</p>
+
+				</div>
+			</div>
+			<div class="input">
+				<label>Year</label>
+				<div class="dropdown">
+
+					<select
+						ng-model="yearOptions"
+						ng-options="opt for opt in matchingYears(modelOptions)"
+						name="year"
+						class="validateme"
+						required>
+						<option value="" disabled selected>Select a Year</option>
+					</select>
+
+					<p ng-class="{'error-active': addCarForm.$submitted && addCarForm.year.$invalid}" class="helper-text error">Enter your car's year.</p>
+
+				</div>
+			</div>
+		</fieldset>
+		<button type="submit" class="cui-button">Save Your Car</button>
+	</form>
+
+</div>

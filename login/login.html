@@ -1,0 +1,16 @@
+<!-- Header & Navigation -->
+<div class="carsiown-nav" ng-include="'header/_header.html'"></div>
+
+<div class="container">
+	<form class="cio-auth-form" ng-submit="fakeLogin()">
+		<h2 class="cui-beta">Log In</h2>
+		<p>This is a fake login form,<br>just showcasing that you'd need to log in at this stage in the user flow</p>
+
+		<label>Username:</label>
+		<input type="text" value="{{username}}" disabled>
+		<label>Password:</label>
+		<input type="password" value="password" disabled>
+
+		<button class="cui-button" type="submit">Log In</button>
+	</form>
+</div>

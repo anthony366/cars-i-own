@@ -1,0 +1,60 @@
+<div class="container">
+	<div class="page-title">
+		<h2 class="cui-alpha">Estimate Resale Value</h2>
+	</div>
+	<form
+		class="carsiown-form"
+		name="estimateCarForm"
+		ng-submit="estimateCar(estimateCarForm.$valid)"
+		ng-class="{'has-error': estimateCarForm.$submitted && estimateCarForm.$invalid}"
+		novalidate>
+		<!-- Error Alert -->
+		<div class="alert alert--error">
+			<cui-icon class="alert__close js-close">
+				<svg class="icon-close">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close">
+					</use>
+				</svg>
+			</cui-icon>
+			<cui-icon class="alert__icon">
+				<svg class="icon-exclamation-circle">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-exclamation-circle">
+					</use>
+				</svg>
+			</cui-icon>
+
+			<h5 class="cui-epsilon heading--alert ng-binding">We need more information.</h5>
+			<p class="alert__content ng-binding ng-scope">Please fix the errors below to save your car.</p>
+		</div>
+		<!-- End Error Alert -->
+
+		<p class="form-header">All fields are required</p>
+		<fieldset>
+			<div class="input">
+				<label>Trim</label>
+				<div class="dropdown">
+					<select
+						name="trim"
+						ng-model="car.trim"
+						ng-options="opt for opt in matchingTrims(car.make, car.model, car.year)"
+						required>
+						<option value="" disabled selected>Select a Trim</option>
+					</select>
+				</div>
+			</div>
+			<div class="field-col--half mileage">
+				<div class="input">
+					<label>Mileage</label>
+					<input ng-model="car.mileage" type="tel" class="validateme" allow-pattern="\d" format maxlength="7">
+				</div>
+			</div>
+			<div class="field-col--half">
+				<div class="input">
+					<label>ZIP Code</label>
+					<input ng-model="car.zipcode" class="validateme zip" type="tel" allow-pattern="\d" maxlength="5">
+				</div>
+			</div>
+		</fieldset>
+		<button type="submit" class="cui-button" style="margin-top: 0;">Get Estimate</button>
+	</form>
+</div>

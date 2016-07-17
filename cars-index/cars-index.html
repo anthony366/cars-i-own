@@ -1,0 +1,7 @@
+<!-- Header & Navigation -->
+<div class="carsiown-nav" ng-include="'header/_header.html'"></div>
+
+<div ng-show="!isLoggedIn()" ng-include="'cars-index/_cars-index-anon.html'"></div>
+<div ng-show="isLoggedIn()" ng-include="'cars-index/_cars-index-authed.html'"></div>
+
+<div ui-view autoscroll="false"></div>

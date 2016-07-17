@@ -1,0 +1,70 @@
+<div class="container">
+
+	<div ng-show="getItem('alertActive')" class="alert alert--success ng-scope">
+		<cui-icon class="alert__close" ng-click="closeAlert()">
+			<svg class="icon-close">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close">
+				</use>
+			</svg>
+		</cui-icon>
+		<cui-icon class="alert__icon">
+			<svg class="icon-check">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-check">
+				</use>
+			</svg>
+		</cui-icon>
+		<h5 class="cui-epsilon heading--alert ng-binding">Success!</h5>
+		<p class="alert__content ng-binding ng-scope">Your car was saved.</p>
+	</div>
+
+	<div class="landing-page-header" ng-class="{ 'no-cars': myLocalCars.length < 1 || !myLocalCars }">
+		<h2 class="cui-alpha login-header">Cars I Own</h2>
+		<p class="cui-beta--secondary">Manage your car's maintenance and repair, keep current on the value, and stay up-to-date on recalls.</p>
+	</div>
+
+</div>
+
+<div class="car-listings" ng-if="myLocalCars.length">
+
+	<div class="card car-listing" ng-repeat="car in myLocalCars | orderBy:'-'">
+		<a class="car-listing__image" ui-sref="car.single({id: car.id})">
+			<img ng-src="{{ carThumb(car) }}" alt="" />
+		</a>
+		<div class="car-listing__details">
+			<p class="car-listing__nickname cui-delta" ng-if="car.nickname">{{car.nickname}}</p>
+			<h2 class="car-listing__title cui-beta">
+				<a ui-sref="car.single({id: car.id})">{{carName(car)}}</a>
+			</h2>
+			<button class="confirmation" ng-click="showModal = !showModal">Delete Car</button>
+		</div>
+		<div class="car-listing__modal" ng-show="showModal">
+			<div class="dialog ng-scope">
+				<div class="dialog__content">
+					<div class="dialog__content-body">
+						<p class="cui-delta">Are you sure you want to remove this car?</p>
+						<div class="modal-buttons">
+							<button class="cui-button--secondary close-dialogbox" ng-click="showModal = !showModal">Cancel</button>
+							<button class="cui-button remove-list-item" ng-click="deleteCar(car.id)">Remove</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="container">
+	<div class="car-added">
+		<a ng-show="myLocalCars.length < 1" ui-sref="caradd" class="cui-button">Add Your Car</a>
+		<a ng-show="myLocalCars.length > 0" ui-sref="caradd" class="cui-button">Add Another Car</a>
+		<div class="car-select">
+			<p>Or select one from your favorite cars:</p>
+			<ul>
+				<li><a href="" ng-click="quickAddCar('Buick', 'Regal', '2014')">2014 Buick Regal</a></li>
+				<li><a href="" ng-click="quickAddCar('Subaru', 'Impreza', '2012')">2012 Subaru Impreza</a></li>
+				<li><a href="" ng-click="quickAddCar('Ford', 'Escape', '2008')">2008 Ford Escape</a></li>
+			</ul>
+		</div>
+	</div>
+</div>

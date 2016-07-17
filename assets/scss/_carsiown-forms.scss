@@ -1,0 +1,85 @@
+.page-carsiown {
+
+	.page-title {
+		h2 {
+			margin: 0;
+			text-align: center;
+		}
+	}
+
+}
+
+.carsiown-form {
+
+	margin: 0 auto;
+	max-width: 47.20rem;
+	@media (min-width: $break1) {
+		margin-bottom: 12rem;
+	}
+
+	fieldset {
+		margin: 0;
+	}
+
+	&.ng-submitted {
+
+		// turn form fields red (also disable lint because Angular demands the qualifying element)
+		// scss-lint:disable QualifyingElement
+		select.ng-invalid-required,
+		input.has-error {
+			border: solid 1px $alert-color-1;
+		}
+
+		// scss-lint:enable QualifyingElement
+
+	}
+
+	.alert.alert--error {
+		display: none;
+		margin: 2.4rem 0 1.6rem;
+		&.error-active {
+			display: block;
+		}
+	}
+
+	.form-header {
+		border: 0;
+		margin-bottom: 1.6rem;
+		padding: 0 0.4rem;
+	}
+
+	.fieldset {
+		margin: 0;
+	}
+	.input {
+		clear: both;
+		margin: 0 0 1.6rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.helper-text {
+
+		display: none;
+
+		&.error-active {
+			display: block;
+		}
+
+	}
+
+	.cui-button {
+		margin-top: 1.6rem;
+		width: 100%;
+	}
+	.field-col--half {
+		float: left;
+		margin: 0 0 1.6rem;
+		width: calc(50% - 0.8rem);
+	}
+	.mileage {
+		margin-right: 1.6rem;
+	}
+}

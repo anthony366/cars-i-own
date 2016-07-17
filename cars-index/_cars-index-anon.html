@@ -1,0 +1,18 @@
+<div class="container">
+	<div class="landing-page-header" ng-class="{ 'no-cars': !isLoggedIn() }">
+		<h2 class="cui-alpha">Cars I Own</h2>
+		<p class="cui-beta--secondary">Manage your car's maintenance and repair, keep current on the value, and stay up-to-date on recalls.</p>
+	</div>
+	<div class="car-added">
+		<a ui-sref="caradd" class="cui-button">Add Your Car</a>
+		<div class="car-select">
+			<p>Or select one from your favorite cars:</p>
+			<ul>
+				<li><a href="#">2014 Buick Regal</a></li>
+				<li><a href="#">2012 Subaru Impreza</a></li>
+				<li><a href="#">2008 Ford Escape</a></li>
+			</ul>
+		</div>
+		<p class="cui-epsilion">Already added your car? <span><a href="#" ng-click="logIn()">Log in</a></span>.</p>
+	</div>
+</div>

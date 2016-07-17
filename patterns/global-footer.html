@@ -1,0 +1,72 @@
+<div class="global-footer">
+    <div class="container">
+        <div class="footer-wrap">
+            <div class="footer-wrap-container">
+                <h5>Our Company
+                    <cui-icon>
+                        <svg class="icon-chevron">
+                            <use xlink:href="#icon-chevron">
+                        </svg>
+                    </cui-icon>
+                </h5>
+                <ul class="footer-list">
+                    <li><a href="">About Cars.com</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Site Map</a></li>
+                    <li><a href="">Careers</a></li>
+                    <li><a href="">Fraud Awareness</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-wrap">
+            <div class="footer-wrap-container">
+                <h5>Our Partners
+                    <cui-icon>
+                        <svg class="icon-chevron">
+                            <use xlink:href="#icon-chevron">
+                        </svg>
+                    </cui-icon>
+                </h5>
+                <ul class="footer-list">
+                    <li><a href="">Auto.com</a></li>
+                    <li><a href="">NewCars.com</a></li>
+                    <li><a href="">RepairPal.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="social-media">
+            <div ng-include="'../../patterns/list-social-footer.html'"></div>
+            <div class="google-search">
+                <input type="text" placeholder="Enter Make or Model">
+                <p class="helper-text">Powered by
+                    <span><cui-icon>
+                        <svg class="icon-google">
+                            <use xlink:href="#icon-google"></use>
+                        </svg>
+                    </cui-icon></span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="copyrights">
+        <div class="container">
+            <div class="privacy"> <a href="">Terms of Service</a> <a href="">Privacy Statement</a> <a href="">Ad Choices</a> <a href="" class="feedback">[+] Feedback</a></div>
+            <div class="copyright">© <span id="footer-year"></span> Cars.com. <span>All rights reserved.</span></div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function() {
+        $('.footer-wrap').click(function() {
+            var winSize = $(window).width();
+            if (winSize <= 540) {
+                $(this).find('.footer-list').slideToggle('slow');
+                $(this).find('cui-icon').toggleClass('chevron-up');
+            }
+        });
+    });
+
+	var d = new Date();
+	var year = d.getFullYear();
+	document.getElementById("footer-year").innerHTML = year;
+</script>

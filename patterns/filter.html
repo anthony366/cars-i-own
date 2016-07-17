@@ -1,0 +1,25 @@
+<span class="tag--filter tag--filter__alt">
+	<cui-icon class="js-close">
+		<svg class="icon-close">
+			<use xlink:href="#icon-close">
+		</svg>
+	</cui-icon> 
+	Clear All
+</span>
+
+<span class="tag--filter">
+	<cui-icon class="js-close">
+		<svg class="icon-close">
+			<use xlink:href="#icon-close">
+		</svg>
+	</cui-icon>  
+	New
+</span>
+
+<script>
+$(document).ready(function() {
+	$(".filter .js-close").on("click", function() {
+		$(this).parents(".filter").fadeOut();
+	});
+});
+</script>

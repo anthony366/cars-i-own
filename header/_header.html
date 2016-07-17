@@ -1,0 +1,194 @@
+<cars-global-navigation sticky-header="true" role="banner">
+	<div class="global-nav">
+		<div class="container">
+			<!-- Logo -->
+			<a href="#" class="global-nav__logo">
+				<img src="./cars-logo.svg" alt="Cars.com logo">
+			</a>
+
+			<!-- Profiles Trigger -->
+
+			<div class="global-nav__profile-trigger" ng-class="{'active': profileMenuOpen}">
+
+				<cui-icon class="global-nav__icon global-nav__icon--profile logout-icon" ng-click="profileMenuOpen = !profileMenuOpen">
+					<svg class="icon icon-user-avatar-line" ng-show="!isLoggedIn()">
+						<use xlink:href="#icon-user-avatar-line"></use>
+					</svg>
+					<svg class="icon icon-user-avatar" ng-show="isLoggedIn()">
+						<use xlink:href="#icon-user-avatar"></use>
+					</svg>
+					<span class="global-nav__profile-count" ng-show="myLocalCars.length && isLoggedIn()">{{myLocalCars.length}}</span>
+
+				</cui-icon>
+			</div>
+
+			<!-- Menu Trigger -->
+			<div class="global-nav__menu-trigger" ng-class="{'active': mobileMenuOpen}" ng-click="mobileMenuOpen = !mobileMenuOpen">
+				<span></span>
+			</div>
+
+			<!-- Menu -->
+			<ul class="global-nav__menu" ng-class="{ 'mobile-menu-open': mobileMenuOpen }">
+				<li class="global-nav__option-parent option-parent--buy">
+					<a href="#">Buy
+						<cui-icon class="global-nav__cta">
+							<svg class="icon-chevron">
+								<use xlink:href="#icon-chevron"></use>
+							</svg>
+						</cui-icon>
+					</a>
+					<div class="global-nav__sub-nav">
+						<a href="#" class="global-nav__close">
+							<cui-icon>
+								<svg class="icon-close">
+									<use xlink:href="#icon-close"></use>
+								</svg>
+							</cui-icon>
+						</a>
+						<ul>
+							<li><a href="#">Find Cars for Sale</a></li>
+							<li><a href="#">Research Car Models</a></li>
+							<li><a href="#">Review a Car</a></li>
+							<li><a href="#">Find a Dealer</a></li>
+							<li class="break"><a href="#">Review a Dealership</a></li>
+							<li><a href="#">Find Used Car Values</a></li>
+							<li><a href="#">Estimate Your Payments</a></li>
+							<li><a href="#">Get Car Buying Advice</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="global-nav__option-parent option-parent--sell">
+					<a href="#">Sell &amp; Trade
+										<cui-icon class="global-nav__cta">
+												<svg class="icon-chevron">
+														<use xlink:href="#icon-chevron">
+												</svg>
+										</cui-icon>
+								</a>
+					<div class="global-nav__sub-nav">
+						<a href="#" class="global-nav__close">
+							<cui-icon>
+								<svg class="icon-close">
+									<use xlink:href="#icon-close">
+								</svg>
+							</cui-icon>
+						</a>
+						<ul>
+							<li><a href="#">Sell Your Car</a></li>
+							<li><a href="#">Find Your Car's Value</a></li>
+							<li><a href="#">How To Sell Your Car</a></li>
+							<li><a href="#">My Car.com Listings</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="global-nav__option-parent option-parent--service">
+					<a href="#">Service &amp; Repair
+										<cui-icon class="global-nav__cta">
+												<svg class="icon-chevron">
+														<use xlink:href="#icon-chevron">
+												</svg>
+										</cui-icon>
+								</a>
+					<div class="global-nav__sub-nav">
+						<a href="#" class="global-nav__close">
+							<cui-icon>
+								<svg class="icon-close">
+									<use xlink:href="#icon-close">
+								</svg>
+							</cui-icon>
+						</a>
+						<ul>
+							<li><a href="#">Get a Service Estimate</a></li>
+							<li class="break"><a href="#">Find a Service Center</a></li>
+							<li><a href="#">Service &amp; Repair Advice</a></li>
+							<li><a href="#">Safety &amp; Recall Notices</a></li>
+							<li><a href="#">Car Maintenance 101</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="global-nav__option-parent option-parent--news">
+					<a href="#">News
+										<cui-icon class="global-nav__cta">
+												<svg class="icon-chevron">
+														<use xlink:href="#icon-chevron">
+												</svg>
+										</cui-icon>
+								</a>
+					<div class="global-nav__sub-nav">
+						<a href="#" class="global-nav__close">
+							<cui-icon>
+								<svg class="icon-close">
+									<use xlink:href="#icon-close">
+								</svg>
+							</cui-icon>
+						</a>
+						<ul>
+							<li><a href="#">Latest Car News</a></li>
+							<li><a href="#">Latest Car Reviews</a></li>
+							<li class="break"><a href="#">Latest Videos</a></li>
+							<li><a href="#">Awards</a></li>
+							<li><a href="#">Multi-Car Comparisons</a></li>
+							<li><a href="#">Updates &amp; Trends</a></li>
+							<li><a href="#">Help for First-Time Buyers</a></li>
+							<li class="break"><a href="#">Child Car Seat Checks</a></li>
+							<li><a href="#">Detroit Auto Show</a></li>
+							<li><a href="#">Chicago Auto Show</a></li>
+							<li><a href="#">New York Auto Show</a></li>
+							<li><a href="#">LA Auto Show</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="global-nav__option-parent option-parent--feedback">
+					<a href="#">[+] Feedback
+										<cui-icon class="global-nav__cta">
+												<svg class="icon-chevron">
+														<use xlink:href="#icon-chevron"></use>
+												</svg>
+										</cui-icon>
+								</a>
+				</li>
+			</ul>
+
+			<!-- Settings menu -->
+			<div class="global-nav__extra global-nav__settings" ng-show="settingsMenuOpen">
+				<a href="#" class="global-nav__close" ng-click="!settingsMenuOpen">
+					<cui-icon>
+						<svg class="icon-close">
+							<use xlink:href="#icon-close">
+						</svg>
+					</cui-icon>
+				</a>
+				<div class="global-nav__sub-menu">
+					<p class="cui-epsilon extra-menu__heading">Welcome <b class="loggedin">back, bradbice@gmail.com </b><b class="loggedout">to Cars.com</b>!</p>
+					<p class="extra-menu__desc"><b class="loggedout">Sign up or log in to access your favorite cars and saved searches on other devices.</b><b class="loggedin">Visit Account Settings to change your email address or name.<br>
+								Use your login on other devices to access your favorite cars and saved searches.</b></p>
+					<ul class="extra-menu__sub-nav">
+						<li class="settings-menu__signup"><a href="#"><b class="loggedout">Sign Up</b><b class="loggedin">Account Settings</b></a></li>
+						<li class="settings-menu__login loginout">
+							<a href="#">
+								<small class="loggedout">Already have an account?</small> Log <b class="loggedout">In</b><b class="loggedin">Out</b>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Favorites menu -->
+			<div class="global-nav__extra global-nav__profile" ng-show="profileMenuOpen">
+				<a class="global-nav__close" ng-click="profileMenuOpen=false">
+					<cui-icon>
+						<svg class="icon-close">
+							<use xlink:href="#icon-close">
+						</svg>
+					</cui-icon>
+				</a>
+
+				<div class="global-nav__sub-menu" ng-show="!isLoggedIn()" ng-include="'header/_user-nav-anon.html'"></div>
+				<div class="global-nav__sub-menu" ng-show="isLoggedIn()" ng-include="'header/_user-nav-authed.html'"></div>
+
+			</div>
+
+		</div>
+	</div>
+
+</cars-global-navigation>

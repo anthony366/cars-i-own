@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="protoCarsIOwn">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Prototype - Cars I Own</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Favicon Stack -->
+	<link rel="icon" type="image/png" href="http://om.cars.com/dpl/html/om-img/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="http://om.cars.com/dpl/html/om-img/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="http://om.cars.com/dpl/html/om-img/favicon-16x16.png" sizes="16x16">
+	<link rel="mask-icon" href="http://om.cars.com/dpl/html/om-img/om-mask-icon.svg" color="#532380">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="assets/google-fonts.css">
+	<link rel="stylesheet" href="assets/patterns.css">
+	<link rel="stylesheet" href="assets/carsiown-index.css">
+
+</head>
+
+<body class="proto-carsiown" ng-controller="carsIOwnCtrl">
+
+	<!-- SVG Symbols -->
+	<div style="display:none;" ng-include="'svg-symbols.svg'"></div>
+
+	<!-- Main View -->
+	<div ui-view autoscroll="false" class="page-body page-carsiown"></div>
+
+	<!-- Global Footer -->
+	<div ng-include="'patterns/global-footer.html'"></div>
+
+	<!-- Angular Scripts -->
+	<script src="assets/js/angular.min.js"></script>
+	<script src="assets/js/angular.sanitize.js"></script>
+	<script src="assets/js/angular-ui-router.min.js"></script>
+	<script src="assets/js/angular-local-storage.min.js"></script>
+	<script src="assets/js/ng-flow-standalone.min.js"></script>
+	<script src="app.js"></script>
+	<script src="cars/carsCtrl.js"></script>
+	<script src="car/singleCarCtrl.js"></script>
+	<script src="signup/signupCtrl.js"></script>
+	<script src="login/loginCtrl.js"></script>
+
+</body>
+
+</html>

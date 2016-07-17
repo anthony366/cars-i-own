@@ -1,0 +1,23 @@
+<div class="tab-container" ng-controller="PanelController as panel">
+    <ul class="tabs">
+        <li class="active" ng-class="{ active: panel.isSelected(1) }" role="tab" aria-selected="true"><a ng-click="panel.selectTab(1)">Tab 1</a></li>
+        <li ng-class="{ active: panel.isSelected(2) }" role="tab"><a ng-click="panel.selectTab(2)">Tab 2</a></li>
+        <li ng-class="{ active: panel.isSelected(3) }" role="tab"><a ng-click="panel.selectTab(3)">Tab 3 Tab Name</a></li>
+    </ul>
+    <div class="tab-contents">
+        <div class="tab-content" ng-show="panel.isSelected(1)" role="tabpanel" aria-expanded="true">
+            Tab 1 content
+        </div>
+        <!-- Tab 1 Ends Here -->
+
+        <div class="tab-content" ng-show="panel.isSelected(2)" role="tabpanel">
+            Tab 2 content
+        </div>
+        <!-- Tab 2 Ends Here -->
+
+        <div class="tab-content" ng-show="panel.isSelected(3)" role="tabpanel">
+            Tab 3 content
+        </div>
+        <!-- Tab 3 Ends Here -->
+    </div>
+</div>

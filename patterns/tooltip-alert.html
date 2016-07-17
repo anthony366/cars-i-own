@@ -1,0 +1,38 @@
+<style>
+    body.pattern-indiv .tooltip-alert__arrow--up { left: 30px; }
+</style>
+
+<div class="tooltip-alert-container">
+    <a class="search-header__save tooltip-alert-trigger" href="#">Save Search</a>
+    <div class="tooltip-alert" id="tooltip-alert-demo-01" style="display: block;">
+        <span class="tooltip-alert__arrow--up"></span>
+        <h3 class="tooltip-alert__title">Like What You're Seeing?</h3>
+        <p class="tooltip-alert__text">Save this search and receive email alerts for newly listed matching inventory.</p>
+        <a class="tooltip-alert__button-dismiss tooltip-btn-close" href="#">Got it!</a>
+        <button class="tooltip-alert__button-close tooltip-btn-close">
+            <cui-icon>
+                <svg class="icon-close">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close">
+                </use></svg>
+            </cui-icon>
+        </button>
+    </div>
+</div>
+
+<script>
+
+$(document).ready(function(){
+    // close tooltips
+    $('.tooltip-btn-close').on('click', function(){
+        var tooltip = $(this).parents('.tooltip-alert');
+        tooltip.fadeOut(300);
+    });
+
+    $('.tooltip-alert-trigger').on('click', function(){
+        if ( !$('#tooltip-alert-demo-01').is(':visible') ) {
+            $('#tooltip-alert-demo-01').fadeIn(300);
+        }
+    });
+});
+
+</script>

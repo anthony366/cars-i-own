@@ -1,0 +1,29 @@
+<div class="dialog dialog--small">
+	<div class="dialog__content">
+		<div class="dialog__content-head">
+			<div class="icon--target js-close">
+				<cui-icon>
+					<svg class="icon-close">
+			  			<use xlink:href="#icon-close">
+					</svg>
+				</cui-icon>
+			</div>
+		</div>
+		<div class="dialog__content-body">
+			<h2 class="cui-beta">Invalid ZIP Code</h2>
+			<p>To find cars in your area, please enter your ZIP code.</p>
+			<div class="invalid-zip" role="group">
+				<input type="text">
+				<button class="cui-button cui-button--fluid">Go</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+$(document).ready(function() {
+	$(".dialog--small .js-close").on("click", function() {
+		$(this).parents(".dialog").fadeOut();
+	});
+});
+</script>
