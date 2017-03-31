@@ -1,2 +1,2 @@
 # cars-i-own
-**Please use a localhost (MAMP, XAMP, WAMP) to view the index.html.
+**Please download the files and use a localhost (MAMP, XAMP, WAMP) to view the index.html.
