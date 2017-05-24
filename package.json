@@ -2,7 +2,12 @@
   "name": "cars-i-own",
   "version": "1.0.0",
   "description": "App for users car selection",
-  "main": "index.js",
+  "scripts": {
+  	"start": "node server.js"
+  },
+  "dependencies": {
+  	"express": "4.13.4"
+  },
   "author": "anthony watson",
   "license": "ISC"
 }
