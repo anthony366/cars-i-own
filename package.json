@@ -1,0 +1,8 @@
+{
+  "name": "cars-i-own",
+  "version": "1.0.0",
+  "description": "App for users car selection",
+  "main": "index.js",
+  "author": "anthony watson",
+  "license": "ISC"
+}
