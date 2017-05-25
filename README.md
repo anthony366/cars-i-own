@@ -4,7 +4,7 @@
 
 <h3>Log In/Sign Up</h3>
 <ul>
-  <li>Click on the user profile icon on the top nav bar on the far right side</li>
+  <li>Click on the user profile icon in the top nav bar on the far right side</li>
   <li>Select either "Log In" or "Sign Up"</li>
   <li>A fake login or sign up form will appear, don't fill out anything just click on the "Log In" or "Sign Up" button</li>
 </ul>
