@@ -1,5 +1,5 @@
 # cars-i-own
-<h2>Overview</h2>
+<h3>Overview</h3>
 <p>To give users the ability to maintain their car's info, such as make, model, year, trim, mileage, and vin. In addtion, the user can stay up to date on recalls, service &amp; repairs, and resale vaules for their car.</p>
 
 
@@ -8,7 +8,7 @@
   <li>Click on "Add Yor Car" button</li>
   <li>Select the make, model, and year of a car, then click "Save Your Car" button"</li>
   <li>A fake login form may appear, if so don't fill anything out just click on the "Log In" button</li>
-  <li>You will see a list of your saved car(s). From the listing page you can delete, edit, or add another car</li>
+  <li>You will see your saved car(s). From the listing page you can delete, edit, or add another car</li>
 </ul>
 <h3>Editing/Updating Car Info</h3>
 <ul>
