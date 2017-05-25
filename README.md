@@ -2,10 +2,11 @@
 <h3>Overview</h3>
 <p>This is a prototype to give users the ability to maintain their car's info, such as make, model, year, trim, mileage, and vin. In addtion, the user can stay up to date on recalls, service &amp; repairs, and resale vaules for their car.</p>
 
-<h3>Logging In</h3>
+<h3>Log In/Sign Up</h3>
 <ul>
-  <li>Click on the user profile icon on the far right side in the nav bar</li>
-  <li>A fake login form will appear, don't fill anything out just click on the "Log In" button</li>
+  <li>Click on the user profile icon on the top nav bar on the far right side</li>
+  <li>Select either "Log In" or "Sign Up"</li>
+  <li>A fake login or sign up form will appear, don't fill out anything just click on the "Log In" or "Sign Up" button</li>
 </ul>
 
 <h3>Save your Car</h3>
