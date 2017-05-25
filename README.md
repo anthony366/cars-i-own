@@ -1,13 +1,17 @@
 # cars-i-own
 <h3>Overview</h3>
-<p>To give users the ability to maintain their car's info, such as make, model, year, trim, mileage, and vin. In addtion, the user can stay up to date on recalls, service &amp; repairs, and resale vaules for their car.</p>
+<p>This is a prototype to give users the ability to maintain their car's info, such as make, model, year, trim, mileage, and vin. In addtion, the user can stay up to date on recalls, service &amp; repairs, and resale vaules for their car.</p>
 
+<h3>Logging In</h3>
+<ul>
+  <li>Click on the user profile icon on the far right side in the nav bar</li>
+  <li>A fake login form will appear, don't fill anything out just click on the "Log In" button</li>
+</ul>
 
 <h3>Save your Car</h3>
 <ul>
   <li>Click on "Add Yor Car" button</li>
   <li>Select the make, model, and year of a car, then click "Save Your Car" button"</li>
-  <li>A fake login form may appear, if so don't fill anything out just click on the "Log In" button</li>
   <li>You will see your saved car(s). From the listing page you can delete, edit, or add another car</li>
 </ul>
 
