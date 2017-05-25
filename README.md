@@ -10,6 +10,8 @@
   <li>A fake login form may appear, if so don't fill anything out just click on the "Log In" button</li>
   <li>You will see your saved car(s). From the listing page you can delete, edit, or add another car</li>
 </ul>
+
+
 <h3>Editing/Updating Car Info</h3>
 <ul>
   <li>Click on the image of the car</li>
